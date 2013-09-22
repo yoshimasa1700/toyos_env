@@ -1,0 +1,160 @@
+;; Object softkinetic_sample/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "softkinetic_sample/"
+  :tables
+  (list
+    (semanticdb-table "ConsoleDemo.cxx"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [942 960])
+            ("vector" include (:system-flag t) nil [961 978])
+            ("exception" include (:system-flag t) nil [979 999])
+            ("string" include (:system-flag t) nil [1000 1017])
+            ("DepthSense.hxx" include (:system-flag t) nil [1019 1044])
+            ("opencv2/opencv.hpp" include (:system-flag t) nil [1046 1075])
+            ("DepthSense" using (:type ("DepthSense" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1077 1104])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1105 1125])
+            ("g_context" variable (:type ("Context" type (:type "class") nil nil)) nil [1127 1145])
+            ("g_dnode" variable (:type ("DepthNode" type (:type "class") nil nil)) nil [1146 1164])
+            ("g_cnode" variable (:type ("ColorNode" type (:type "class") nil nil)) nil [1165 1183])
+            ("g_anode" variable (:type ("AudioNode" type (:type "class") nil nil)) nil [1184 1202])
+            ("g_aFrames" variable (:type ("uint32_t" type (:type "class") nil nil)) nil [1204 1227])
+            ("g_cFrames" variable (:type ("uint32_t" type (:type "class") nil nil)) nil [1228 1251])
+            ("g_dFrames" variable (:type ("uint32_t" type (:type "class") nil nil)) nil [1252 1275])
+            ("g_bDeviceFound" variable (:type "bool") nil [1277 1305])
+            ("g_pProjHelper" variable
+               (:pointer 1
+                :type ("ProjectionHelper" type (:type "class") nil nil))
+                nil [1307 1346])
+            ("g_scp" variable (:type ("StereoCameraParameters" type (:type "class") nil nil)) nil [1347 1376])
+            ("imageNum" variable (:type "int") nil [1378 1395])
+            ("g_depth" variable (:type ("cv::Mat" type (:type "class") nil nil)) nil [1397 1421])
+            ("g_color" variable (:type ("cv::Mat" type (:type "class") nil nil)) nil [1397 1421])
+            ("onNewColorSample" function
+               (:arguments 
+                  ( ("node" variable (:type ("ColorNode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1847 1862])
+                    ("data" variable (:type ("ColorNode::NewSampleReceivedData" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1863 1901]))                  
+                :type "void")
+                nil [1825 2546])
+            ("onNewDepthSample" function
+               (:arguments 
+                  ( ("node" variable (:type ("DepthNode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2685 2700])
+                    ("data" variable (:type ("DepthNode::NewSampleReceivedData" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2701 2739]))                  
+                :type "void")
+                nil [2663 4324])
+            ("configureDepthNode" function (:type "void") nil [5444 6651])
+            ("configureColorNode" function (:type "void") nil [6734 7970])
+            ("configureNode" function
+               (:arguments 
+                  ( ("node" variable (:type ("Node" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8072 8082]))                  
+                :type "void")
+                nil [8053 8683])
+            ("onNodeConnected" function
+               (:arguments 
+                  ( ("device" variable (:type ("Device" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8787 8801])
+                    ("data" variable (:type ("Device::NodeAddedData" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8802 8829]))                  
+                :type "void")
+                nil [8766 8863])
+            ("onNodeDisconnected" function
+               (:arguments 
+                  ( ("device" variable (:type ("Device" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8970 8984])
+                    ("data" variable (:type ("Device::NodeRemovedData" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8985 9014]))                  
+                :type "void")
+                nil [8946 9365])
+            ("onDeviceConnected" function
+               (:arguments 
+                  ( ("context" variable (:type ("Context" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9471 9487])
+                    ("data" variable (:type ("Context::DeviceAddedData" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9488 9518]))                  
+                :type "void")
+                nil [9448 9753])
+            ("onDeviceDisconnected" function
+               (:arguments 
+                  ( ("context" variable (:type ("Context" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9862 9878])
+                    ("data" variable (:type ("Context::DeviceRemovedData" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9879 9911]))                  
+                :type "void")
+                nil [9836 9980])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [10072 10081])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10082 10095]))                  
+                :type "int")
+                nil [10063 11249]))          
+      :file "ConsoleDemo.cxx"
+      :pointmax 11250
+      :fsize 11249
+      :lastmodtime '(21036 8772 151960 747000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-gmake-mode
+      :tags 
+        '( ("default_target" function (:arguments ("all")) nil [163 183])
+            (".PHONY" function (:arguments ("default_target")) nil [183 207])
+            (".SUFFIXES" function nil nil [382 393])
+            ("SUFFIXES" variable nil nil [457 468])
+            (".SUFFIXES" function (:arguments (".hpux_make_needs_suffix_list")) nil [469 509])
+            ("$(VERBOSE)" function nil nil [551 570])
+            ("cmake_force" function nil nil [610 623])
+            (".PHONY" function (:arguments ("cmake_force")) nil [623 644])
+            ("SHELL" variable (:default-value ("/bin/sh")) nil [812 828])
+            ("CMAKE_COMMAND" variable (:default-value ("/usr/bin/cmake")) nil [853 884])
+            ("RM" variable (:default-value ("/usr/bin/cmake" "-E" "remove" "-f")) nil [917 950])
+            ("CMAKE_SOURCE_DIR" variable (:default-value ("/home/masahiko/Programs/softkinetic_sample")) nil [1008 1070])
+            ("CMAKE_BINARY_DIR" variable (:default-value ("/home/masahiko/Programs/softkinetic_sample")) nil [1127 1189])
+            ("edit_cache" function nil nil [1349 1500])
+            (".PHONY" function (:arguments ("edit_cache")) nil [1500 1520])
+            ("edit_cache/fast" function (:arguments ("edit_cache")) nil [1562 1590])
+            (".PHONY" function (:arguments ("edit_cache/fast")) nil [1590 1615])
+            ("rebuild_cache" function nil nil [1660 1845])
+            (".PHONY" function (:arguments ("rebuild_cache")) nil [1845 1868])
+            ("rebuild_cache/fast" function (:arguments ("rebuild_cache")) nil [1913 1947])
+            (".PHONY" function (:arguments ("rebuild_cache/fast")) nil [1947 1975])
+            ("all" function (:arguments ("cmake_check_build_system")) nil [1998 2328])
+            (".PHONY" function (:arguments ("all")) nil [2328 2341])
+            ("clean" function nil nil [2366 2412])
+            (".PHONY" function (:arguments ("clean")) nil [2412 2427])
+            ("clean/fast" function (:arguments ("clean")) nil [2452 2470])
+            (".PHONY" function (:arguments ("clean/fast")) nil [2470 2490])
+            ("preinstall" function (:arguments ("all")) nil [2527 2587])
+            (".PHONY" function (:arguments ("preinstall")) nil [2587 2607])
+            ("preinstall/fast" function nil nil [2644 2705])
+            (".PHONY" function (:arguments ("preinstall/fast")) nil [2705 2730])
+            ("depend" function nil nil [2747 2866])
+            (".PHONY" function (:arguments ("depend")) nil [2866 2882])
+            ("HFMD_softkinect" function (:arguments ("cmake_check_build_system")) nil [3037 3128])
+            (".PHONY" function (:arguments ("HFMD_softkinect")) nil [3128 3153])
+            ("HFMD_softkinect/fast" function nil nil [3184 3297])
+            (".PHONY" function (:arguments ("HFMD_softkinect/fast")) nil [3297 3327])
+            ("ConsoleDemo.o" function (:arguments ("ConsoleDemo.cxx.o")) nil [3328 3361])
+            (".PHONY" function (:arguments ("ConsoleDemo.o")) nil [3361 3384])
+            ("ConsoleDemo.cxx.o" function nil nil [3418 3540])
+            (".PHONY" function (:arguments ("ConsoleDemo.cxx.o")) nil [3540 3567])
+            ("ConsoleDemo.i" function (:arguments ("ConsoleDemo.cxx.i")) nil [3568 3601])
+            (".PHONY" function (:arguments ("ConsoleDemo.i")) nil [3601 3624])
+            ("ConsoleDemo.cxx.i" function nil nil [3662 3784])
+            (".PHONY" function (:arguments ("ConsoleDemo.cxx.i")) nil [3784 3811])
+            ("ConsoleDemo.s" function (:arguments ("ConsoleDemo.cxx.s")) nil [3812 3845])
+            (".PHONY" function (:arguments ("ConsoleDemo.s")) nil [3845 3868])
+            ("ConsoleDemo.cxx.s" function nil nil [3910 4032])
+            (".PHONY" function (:arguments ("ConsoleDemo.cxx.s")) nil [4032 4059])
+            ("help" function nil nil [4074 4408])
+            (".PHONY" function (:arguments ("help")) nil [4408 4422])
+            ("cmake_check_build_system" function nil nil [4729 4866])
+            (".PHONY" function (:arguments ("cmake_check_build_system")) nil [4866 4900]))          
+      :file "Makefile"
+      :pointmax 4901
+      :fsize 4900
+      :lastmodtime '(21035 63689 680193 719000)
+      :unmatched-syntax nil))
+  :file "!home!masahiko!Programs!softkinetic_sample!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

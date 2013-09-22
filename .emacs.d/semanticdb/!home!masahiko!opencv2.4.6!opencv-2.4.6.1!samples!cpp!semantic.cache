@@ -1,0 +1,106 @@
+;; Object cpp/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "cpp/"
+  :tables
+  (list
+    (semanticdb-table "openni_capture.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("opencv2/highgui/highgui.hpp" include nil nil [1 39])
+            ("opencv2/imgproc/imgproc.hpp" include nil nil [40 78])
+            ("iostream" include (:system-flag t) nil [80 99])
+            ("cv" using (:type ("cv" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [101 120])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [121 141])
+            ("help" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [143 1079])
+            ("colorizeDisparity" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("gray" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Mat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1112 1128])
+                    ("rgb" variable
+                       (:reference 1
+                        :type ("Mat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1129 1138])
+                    ("maxDisp" variable (:type "double") (reparse-symbol arg-sub-list) [1139 1154])
+                    ("S" variable (:type "float") (reparse-symbol arg-sub-list) [1160 1168])
+                    ("V" variable (:type "float") (reparse-symbol arg-sub-list) [1173 1181]))                  
+                :type "void")
+                nil [1081 2780])
+            ("getMaxDisparity" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("capture" variable
+                       (:reference 1
+                        :type ("VideoCapture" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2812 2835]))                  
+                :type "float")
+                nil [2782 3082])
+            ("printCommandLineParams" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [3084 4146])
+            ("parseCommandLine" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [4178 4187])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4188 4201])
+                    ("isColorizeDisp" variable
+                       (:reference 1
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [4202 4223])
+                    ("isFixedMaxDisp" variable
+                       (:reference 1
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [4224 4245])
+                    ("imageMode" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [4246 4261])
+                    ("retrievedImageFlags" variable
+                       (:dereference 1
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [4262 4289])
+                    ("filename" variable
+                       (:reference 1
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4313 4330])
+                    ("isFileReading" variable
+                       (:reference 1
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [4331 4352]))                  
+                :type "void")
+                nil [4148 6485])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [6676 6685])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6686 6700]))                  
+                :type "int")
+                nil [6666 11594]))          
+      :file "openni_capture.cpp"
+      :pointmax 11595
+      :fsize 11594
+      :lastmodtime '(20957 18988 0 0)
+      :unmatched-syntax '((number 1181 . 1184) (punctuation 1180 . 1181) (number 1168 . 1171) (punctuation 1167 . 1168) (number 1155 . 1158) (punctuation 1154 . 1155) (punctuation 1153 . 1154))))
+  :file "!home!masahiko!opencv2.4.6!opencv-2.4.6.1!samples!cpp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

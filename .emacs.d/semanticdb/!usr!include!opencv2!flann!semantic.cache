@@ -1,0 +1,417 @@
+;; Object flann/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "flann/"
+  :tables
+  (list
+    (semanticdb-table "miniflann.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("_OPENCV_MINIFLANN_HPP_" variable (:constant-flag t) nil [2197 2219])
+            ("opencv2/core/core.hpp" include nil nil [2241 2273])
+            ("opencv2/flann/defines.h" include nil nil [2274 2308])
+            ("cv" type
+               (:members 
+                  ( ("flann" type
+                       (:members 
+                          ( ("cvflann" using (:type ("cvflann" type
+                                 (:prototype t
+                                  :type "namespace")
+                                  nil nil)) (reparse-symbol namespacesubparts) [2346 2370])
+                            ("IndexParams" variable (:type ("CV_EXPORTS" type
+                                 (:prototype t
+                                  :type "struct")
+                                  nil nil)) (reparse-symbol namespacesubparts) [2372 3246])
+                            ("IndexParams" variable (:type "int") (reparse-symbol namespacesubparts) [3297 3349])
+                            ("IndexParams" variable (:type "int") (reparse-symbol namespacesubparts) [3400 3441])
+                            ("IndexParams" variable (:type "int") (reparse-symbol namespacesubparts) [3491 3713])
+                            ("IndexParams" variable (:type "int") (reparse-symbol namespacesubparts) [3763 3941])
+                            ("IndexParams" variable (:type "int") (reparse-symbol namespacesubparts) [3992 4193])
+                            ("IndexParams" variable (:type "int") (reparse-symbol namespacesubparts) [4237 4328])
+                            ("IndexParams" variable (:type "int") (reparse-symbol namespacesubparts) [4378 4445])
+                            ("IndexParams" variable (:type "int") (reparse-symbol namespacesubparts) [4495 4583])
+                            ("Index" variable (:type ("CV_EXPORTS_W" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [4593 5781]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [2327 5792]))                  
+                :type "namespace")
+                nil [2310 5794]))          
+      :file "miniflann.hpp"
+      :pointmax 5849
+      :fsize 5848
+      :lastmodtime '(20041 10614 0 0)
+      :unmatched-syntax '((PUBLIC 4488 . 4494) (punctuation 4486 . 4487) (symbol 4473 . 4485) (symbol 4462 . 4472) (STRUCT 4455 . 4461) (PUBLIC 4371 . 4377) (punctuation 4369 . 4370) (symbol 4352 . 4368) (symbol 4341 . 4351) (STRUCT 4334 . 4340) (PUBLIC 4230 . 4236) (punctuation 4228 . 4229) (symbol 4213 . 4227) (symbol 4202 . 4212) (STRUCT 4195 . 4201) (PUBLIC 3985 . 3991) (punctuation 3983 . 3984) (symbol 3965 . 3982) (symbol 3954 . 3964) (STRUCT 3947 . 3953) (PUBLIC 3756 . 3762) (punctuation 3754 . 3755) (symbol 3733 . 3753) (symbol 3722 . 3732) (STRUCT 3715 . 3721) (PUBLIC 3484 . 3490) (punctuation 3482 . 3483) (symbol 3461 . 3481) (symbol 3450 . 3460) (STRUCT 3443 . 3449) (PUBLIC 3393 . 3399) (punctuation 3391 . 3392) (symbol 3373 . 3390) (symbol 3362 . 3372) (STRUCT 3355 . 3361) (PUBLIC 3290 . 3296) (punctuation 3288 . 3289) (symbol 3270 . 3287) (symbol 3259 . 3269) (STRUCT 3252 . 3258))
+      :lexical-table 
+        '(("_OPENCV_MINIFLANN_HPP_")
+          )
+)
+    (semanticdb-table "defines.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("OPENCV_FLANN_DEFINES_H_" variable (:constant-flag t) nil [1647 1670])
+            ("config.h" include nil nil [1672 1691])
+            ("FLANN_EXPORT" variable (:constant-flag t) nil [2013 2025])
+            ("FLANN_DEPRECATED" variable (:constant-flag t) nil [2114 2130])
+            ("FLANN_DEPRECATED" variable (:constant-flag t) nil [2331 2347])
+            ("FLANN_PLATFORM_64_BIT" variable (:constant-flag t) nil [2471 2492])
+            ("FLANN_ARRAY_LEN" variable (:constant-flag t) nil [2569 2584])
+            ("cvflann" type
+               (:members 
+                  ( ("flann_algorithm_t" type
+                       (:members 
+                          ( ("FLANN_INDEX_LINEAR" variable
+                               (:constant-flag t
+                                :default-value (2726 2727)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [2705 2727])
+                            ("FLANN_INDEX_KDTREE" variable
+                               (:constant-flag t
+                                :default-value (2754 2755)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [2733 2755])
+                            ("FLANN_INDEX_KMEANS" variable
+                               (:constant-flag t
+                                :default-value (2782 2783)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [2761 2783])
+                            ("FLANN_INDEX_COMPOSITE" variable
+                               (:constant-flag t
+                                :default-value (2813 2814)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [2789 2814])
+                            ("FLANN_INDEX_KDTREE_SINGLE" variable
+                               (:constant-flag t
+                                :default-value (2848 2849)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [2820 2849])
+                            ("FLANN_INDEX_HIERARCHICAL" variable
+                               (:constant-flag t
+                                :default-value (2882 2883)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [2855 2883])
+                            ("FLANN_INDEX_LSH" variable
+                               (:constant-flag t
+                                :default-value (2907 2908)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [2889 2908])
+                            ("FLANN_INDEX_SAVED" variable
+                               (:constant-flag t
+                                :default-value (2934 2937)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [2914 2937])
+                            ("FLANN_INDEX_AUTOTUNED" variable
+                               (:constant-flag t
+                                :default-value (2967 2970)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [2943 2970])
+                            ("LINEAR" variable
+                               (:constant-flag t
+                                :default-value (3057 3058)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3048 3058])
+                            ("KDTREE" variable
+                               (:constant-flag t
+                                :default-value (3073 3074)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3064 3074])
+                            ("KMEANS" variable
+                               (:constant-flag t
+                                :default-value (3089 3090)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3080 3090])
+                            ("COMPOSITE" variable
+                               (:constant-flag t
+                                :default-value (3108 3109)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3096 3109])
+                            ("KDTREE_SINGLE" variable
+                               (:constant-flag t
+                                :default-value (3131 3132)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3115 3132])
+                            ("SAVED" variable
+                               (:constant-flag t
+                                :default-value (3146 3149)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3138 3149])
+                            ("AUTOTUNED" variable
+                               (:constant-flag t
+                                :default-value (3167 3170)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3155 3170]))                          
+                        :type "enum")
+                        (reparse-symbol namespacesubparts) [2676 3173])
+                    ("flann_centers_init_t" type
+                       (:members 
+                          ( ("FLANN_CENTERS_RANDOM" variable
+                               (:constant-flag t
+                                :default-value (3232 3233)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3209 3233])
+                            ("FLANN_CENTERS_GONZALES" variable
+                               (:constant-flag t
+                                :default-value (3264 3265)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3239 3265])
+                            ("FLANN_CENTERS_KMEANSPP" variable
+                               (:constant-flag t
+                                :default-value (3296 3297)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3271 3297])
+                            ("CENTERS_RANDOM" variable
+                               (:constant-flag t
+                                :default-value (3394 3395)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3377 3395])
+                            ("CENTERS_GONZALES" variable
+                               (:constant-flag t
+                                :default-value (3420 3421)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3401 3421])
+                            ("CENTERS_KMEANSPP" variable
+                               (:constant-flag t
+                                :default-value (3446 3447)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3427 3447]))                          
+                        :type "enum")
+                        (reparse-symbol namespacesubparts) [3177 3450])
+                    ("flann_log_level_t" type
+                       (:members 
+                          ( ("FLANN_LOG_NONE" variable
+                               (:constant-flag t
+                                :default-value (3498 3499)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3481 3499])
+                            ("FLANN_LOG_FATAL" variable
+                               (:constant-flag t
+                                :default-value (3523 3524)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3505 3524])
+                            ("FLANN_LOG_ERROR" variable
+                               (:constant-flag t
+                                :default-value (3548 3549)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3530 3549])
+                            ("FLANN_LOG_WARN" variable
+                               (:constant-flag t
+                                :default-value (3572 3573)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3555 3573])
+                            ("FLANN_LOG_INFO" variable
+                               (:constant-flag t
+                                :default-value (3596 3597)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3579 3597]))                          
+                        :type "enum")
+                        (reparse-symbol namespacesubparts) [3452 3601])
+                    ("flann_distance_t" type
+                       (:members 
+                          ( ("FLANN_DIST_EUCLIDEAN" variable
+                               (:constant-flag t
+                                :default-value (3654 3655)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3631 3655])
+                            ("FLANN_DIST_L2" variable
+                               (:constant-flag t
+                                :default-value (3677 3678)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3661 3678])
+                            ("FLANN_DIST_MANHATTAN" variable
+                               (:constant-flag t
+                                :default-value (3707 3708)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3684 3708])
+                            ("FLANN_DIST_L1" variable
+                               (:constant-flag t
+                                :default-value (3730 3731)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3714 3731])
+                            ("FLANN_DIST_MINKOWSKI" variable
+                               (:constant-flag t
+                                :default-value (3760 3761)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3737 3761])
+                            ("FLANN_DIST_MAX" variable
+                               (:constant-flag t
+                                :default-value (3786 3787)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3767 3787])
+                            ("FLANN_DIST_HIST_INTERSECT" variable
+                               (:constant-flag t
+                                :default-value (3823 3824)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3793 3824])
+                            ("FLANN_DIST_HELLINGER" variable
+                               (:constant-flag t
+                                :default-value (3853 3854)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3830 3854])
+                            ("FLANN_DIST_CHI_SQUARE" variable
+                               (:constant-flag t
+                                :default-value (3884 3885)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3860 3885])
+                            ("FLANN_DIST_CS" variable
+                               (:constant-flag t
+                                :default-value (3915 3916)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3891 3916])
+                            ("FLANN_DIST_KULLBACK_LEIBLER" variable
+                               (:constant-flag t
+                                :default-value (3953 3954)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3922 3954])
+                            ("FLANN_DIST_KL" variable
+                               (:constant-flag t
+                                :default-value (3991 3992)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3960 3992])
+                            ("EUCLIDEAN" variable
+                               (:constant-flag t
+                                :default-value (4081 4082)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [4069 4082])
+                            ("MANHATTAN" variable
+                               (:constant-flag t
+                                :default-value (4100 4101)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [4088 4101])
+                            ("MINKOWSKI" variable
+                               (:constant-flag t
+                                :default-value (4119 4120)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [4107 4120])
+                            ("MAX_DIST" variable
+                               (:constant-flag t
+                                :default-value (4139 4140)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [4126 4140])
+                            ("HIST_INTERSECT" variable
+                               (:constant-flag t
+                                :default-value (4165 4166)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [4146 4166])
+                            ("HELLINGER" variable
+                               (:constant-flag t
+                                :default-value (4184 4185)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [4172 4185])
+                            ("CS" variable
+                               (:constant-flag t
+                                :default-value (4204 4205)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [4191 4205])
+                            ("KL" variable
+                               (:constant-flag t
+                                :default-value (4224 4225)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [4211 4225])
+                            ("KULLBACK_LEIBLER" variable
+                               (:constant-flag t
+                                :default-value (4251 4252)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [4231 4252]))                          
+                        :type "enum")
+                        (reparse-symbol namespacesubparts) [3603 4255])
+                    ("flann_datatype_t" type
+                       (:members 
+                          ( ("FLANN_INT8" variable
+                               (:constant-flag t
+                                :default-value (4298 4299)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [4285 4299])
+                            ("FLANN_INT16" variable
+                               (:constant-flag t
+                                :default-value (4319 4320)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [4305 4320])
+                            ("FLANN_INT32" variable
+                               (:constant-flag t
+                                :default-value (4340 4341)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [4326 4341])
+                            ("FLANN_INT64" variable
+                               (:constant-flag t
+                                :default-value (4361 4362)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [4347 4362])
+                            ("FLANN_UINT8" variable
+                               (:constant-flag t
+                                :default-value (4382 4383)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [4368 4383])
+                            ("FLANN_UINT16" variable
+                               (:constant-flag t
+                                :default-value (4404 4405)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [4389 4405])
+                            ("FLANN_UINT32" variable
+                               (:constant-flag t
+                                :default-value (4426 4427)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [4411 4427])
+                            ("FLANN_UINT64" variable
+                               (:constant-flag t
+                                :default-value (4448 4449)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [4433 4449])
+                            ("FLANN_FLOAT32" variable
+                               (:constant-flag t
+                                :default-value (4471 4472)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [4455 4472])
+                            ("FLANN_FLOAT64" variable
+                               (:constant-flag t
+                                :default-value (4494 4495)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [4478 4495]))                          
+                        :type "enum")
+                        (reparse-symbol namespacesubparts) [4257 4498])
+                    ("" type
+                       (:members 
+                          ( ("FLANN_CHECKS_UNLIMITED" variable
+                               (:constant-flag t
+                                :default-value (4536 4538)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [4511 4538])
+                            ("FLANN_CHECKS_AUTOTUNED" variable
+                               (:constant-flag t
+                                :default-value (4569 4571)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [4544 4571]))                          
+                        :type "enum")
+                        (reparse-symbol namespacesubparts) [4500 4574]))                  
+                :type "namespace")
+                nil [2614 4577]))          
+      :file "defines.h"
+      :pointmax 4616
+      :fsize 4615
+      :lastmodtime '(20023 61992 0 0)
+      :unmatched-syntax '((semantic-list 2253 . 2322) (symbol 2246 . 2253) (string 2254 . 2321) (symbol 2239 . 2245) (string 2254 . 2321) (punctuation 2238 . 2239))
+      :lexical-table 
+        '(("OPENCV_FLANN_DEFINES_H_")
+          ("FLANN_PLATFORM_64_BIT")
+          ("FLANN_EXPORT")
+          ("FLANN_DEPRECATED")
+          ("FLANN_ARRAY_LEN" (spp-arg-list ("a") 2584 . 2587) . ((semantic-list "(sizeof(a)/sizeof(a[0]))" 2588 . 2612)))
+          )
+)
+    (semanticdb-table "config.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("OPENCV_FLANN_CONFIG_H_" variable (:constant-flag t) nil [1646 1668])
+            ("FLANN_VERSION_" variable (:constant-flag t) nil [1729 1743]))          
+      :file "config.h"
+      :pointmax 1790
+      :fsize 1789
+      :lastmodtime '(20023 61992 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("OPENCV_FLANN_CONFIG_H_")
+          ("FLANN_VERSION_" . ((string "\"1.6.10\"" 1744 . 1752)))
+          )
+))
+  :file "!usr!include!opencv2!flann!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

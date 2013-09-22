@@ -1,0 +1,41 @@
+;; Object archive/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "archive/"
+  :tables
+  (list
+    (semanticdb-table "archive_exception.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("BOOST_ARCHIVE_ARCHIVE_EXCEPTION_HPP" variable (:constant-flag t) nil [53 88])
+            ("exception" include (:system-flag t) nil [648 668])
+            ("boost/assert.hpp" include (:system-flag t) nil [669 696])
+            ("string" include (:system-flag t) nil [697 714])
+            ("boost/config.hpp" include (:system-flag t) nil [716 743])
+            ("boost/preprocessor/empty.hpp" include (:system-flag t) nil [745 784])
+            ("boost/archive/detail/decl.hpp" include (:system-flag t) nil [785 825])
+            ("boost/archive/detail/abi_prefix.hpp" include (:system-flag t) nil [1145 1191])
+            ("boost" type
+               (:members 
+                  ( ("archive" type
+                       (:members 
+                          ( ("std::exception" variable
+                               (:typemodifiers ("virtual")
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [1441 3737]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1238 3740]))                  
+                :type "namespace")
+                nil [1220 3762])
+            ("boost/archive/detail/abi_suffix.hpp" include (:system-flag t) nil [3782 3828]))          
+      :file "archive_exception.hpp"
+      :pointmax 3906
+      :fsize 3905
+      :lastmodtime '(20225 54164 0 0)
+      :unmatched-syntax '((PUBLIC 1434 . 1440) (punctuation 1427 . 1428) (symbol 1409 . 1426) (semantic-list 1390 . 1408) (symbol 1372 . 1390) (semantic-list 1405 . 1407) (CLASS 1366 . 1371) (close-paren 1407 . 1408) (semantic-list 1405 . 1407) (symbol 1391 . 1405) (open-paren 1390 . 1391) (close-paren 1407 . 1408) (semantic-list 1405 . 1407) (symbol 1391 . 1405) (open-paren 1390 . 1391))
+      :lexical-table 
+        '(("BOOST_ARCHIVE_ARCHIVE_EXCEPTION_HPP")
+          )
+))
+  :file "!usr!include!boost!archive!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

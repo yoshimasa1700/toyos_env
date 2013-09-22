@@ -1,0 +1,1403 @@
+;; Object video/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "video/"
+  :tables
+  (list
+    (semanticdb-table "video.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("__OPENCV_VIDEO_HPP__" variable (:constant-flag t) nil [2195 2215])
+            ("opencv2/video/tracking.hpp" include nil nil [2217 2254])
+            ("opencv2/video/background_segm.hpp" include nil nil [2255 2299]))          
+      :file "video.hpp"
+      :pointmax 2331
+      :fsize 2330
+      :lastmodtime '(20023 61993 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__OPENCV_VIDEO_HPP__")
+          )
+)
+    (semanticdb-table "tracking.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("__OPENCV_TRACKING_HPP__" variable (:constant-flag t) nil [2266 2289])
+            ("opencv2/core/core.hpp" include nil nil [2291 2323])
+            ("opencv2/imgproc/imgproc_c.h" include nil nil [2324 2362])
+            ("cvKalmanUpdateByMeasurement" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [12247 12274])
+            ("cvKalmanUpdateByTime" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [12201 12221])
+            ("cvKalmanCorrect" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("kalman" variable
+                       (:pointer 1
+                        :type ("CvKalman" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12146 12163])
+                    ("measurement" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12164 12190]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [12129 12191])
+            ("cvKalmanPredict" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("kalman" variable
+                       (:pointer 1
+                        :type ("CvKalman" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11912 11929])
+                    ("control" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11968 11999])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11989 12005]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [11895 12007])
+            ("cvReleaseKalman" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("kalman" variable
+                       (:pointer 2
+                        :type ("CvKalman" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11779 11797]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [11762 11798])
+            ("cvCreateKalman" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("dynam_params" variable (:type "int") (reparse-symbol arg-sub-list) [11607 11624])
+                    ("measure_params" variable (:type "int") (reparse-symbol arg-sub-list) [11625 11644])
+                    ("control_params" variable (:type "int") (reparse-symbol arg-sub-list) [11678 11707])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11697 11710]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [11591 11712])
+            ("CvKalman" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :superclasses "CvKalman"
+                :typedef ("CvKalman" type (:type "struct") nil nil))
+                (reparse-symbol extern-c-contents) [9289 11491])
+            ("CvKalman" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("MP" variable (:type "int") (reparse-symbol classsubparts) [9319 9326])
+                    ("DP" variable (:type "int") (reparse-symbol classsubparts) [9397 9404])
+                    ("CP" variable (:type "int") (reparse-symbol classsubparts) [9469 9476])
+                    ("PosterState" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol classsubparts) [9590 9609])
+                    ("PriorState" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol classsubparts) [9648 9666])
+                    ("DynamMatr" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol classsubparts) [9707 9724])
+                    ("MeasurementMatr" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol classsubparts) [9773 9796])
+                    ("MNCovariance" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol classsubparts) [9840 9860])
+                    ("PNCovariance" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol classsubparts) [9910 9930])
+                    ("KalmGainMatr" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol classsubparts) [9976 9996])
+                    ("PriorErrorCovariance" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol classsubparts) [10029 10057])
+                    ("PosterErrorCovariance" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol classsubparts) [10091 10120])
+                    ("Temp1" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol classsubparts) [10155 10168])
+                    ("Temp2" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol classsubparts) [10208 10221])
+                    ("state_pre" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10269 10286])
+                    ("state_post" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10389 10407])
+                    ("transition_matrix" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10518 10543])
+                    ("control_matrix" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10584 10606])
+                    ("measurement_matrix" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10715 10741])
+                    ("process_noise_cov" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10776 10801])
+                    ("measurement_noise_cov" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10850 10879])
+                    ("error_cov_pre" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10930 10951])
+                    ("gain" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11075 11087])
+                    ("error_cov_post" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11207 11229])
+                    ("temp1" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11355 11368])
+                    ("temp2" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11412 11425])
+                    ("temp3" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11430 11443])
+                    ("temp4" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11448 11461])
+                    ("temp5" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11466 11479]))                  )
+                (reparse-symbol extern-c-contents) [9289 11491])
+            ("cvMeanShift" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("prob_image" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9026 9050])
+                    ("window" variable (:type ("CvRect" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9051 9066])
+                    ("criteria" variable (:type ("CvTermCriteria" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9092 9116])
+                    ("comp" variable
+                       (:pointer 1
+                        :type ("CvConnectedComp" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9117 9140]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9013 9141])
+            ("cvCamShift" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("prob_image" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8722 8746])
+                    ("window" variable (:type ("CvRect" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8747 8762])
+                    ("criteria" variable (:type ("CvTermCriteria" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8787 8811])
+                    ("comp" variable
+                       (:pointer 1
+                        :type ("CvConnectedComp" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8812 8834])
+                    ("box" variable
+                       (:pointer 1
+                        :type ("CvBox2D" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8859 8882])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8872 8888]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8710 8891])
+            ("cvSegmentMotion" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("mhi" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8108 8125])
+                    ("seg_mask" variable
+                       (:pointer 1
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8126 8142])
+                    ("storage" variable
+                       (:pointer 1
+                        :type ("CvMemStorage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8175 8197])
+                    ("timestamp" variable (:type "double") (reparse-symbol arg-sub-list) [8230 8247])
+                    ("seg_thresh" variable (:type "double") (reparse-symbol arg-sub-list) [8248 8267]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8091 8268])
+            ("cvCalcGlobalOrientation" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("orientation" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7764 7789])
+                    ("mask" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7790 7808])
+                    ("mhi" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7849 7866])
+                    ("timestamp" variable (:type "double") (reparse-symbol arg-sub-list) [7867 7884])
+                    ("duration" variable (:type "double") (reparse-symbol arg-sub-list) [7925 7942]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7739 7943])
+            ("cvCalcMotionGradient" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("mhi" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7350 7367])
+                    ("mask" variable
+                       (:pointer 1
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7368 7380])
+                    ("orientation" variable
+                       (:pointer 1
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7381 7400])
+                    ("delta1" variable (:type "double") (reparse-symbol arg-sub-list) [7438 7452])
+                    ("delta2" variable (:type "double") (reparse-symbol arg-sub-list) [7453 7467])
+                    ("aperture_size" variable (:type "int") (reparse-symbol arg-sub-list) [7505 7533])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7523 7536]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7328 7538])
+            ("cvUpdateMotionHistory" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("silhouette" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7087 7111])
+                    ("mhi" variable
+                       (:pointer 1
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7112 7123])
+                    ("timestamp" variable (:type "double") (reparse-symbol arg-sub-list) [7162 7179])
+                    ("duration" variable (:type "double") (reparse-symbol arg-sub-list) [7180 7197]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7064 7198])
+            ("cvCalcOpticalFlowFarneback" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("prev" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5803 5821])
+                    ("next" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5822 5840])
+                    ("flow" variable
+                       (:pointer 1
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5881 5893])
+                    ("pyr_scale" variable (:type "double") (reparse-symbol arg-sub-list) [5894 5911])
+                    ("levels" variable (:type "int") (reparse-symbol arg-sub-list) [5912 5923])
+                    ("winsize" variable (:type "int") (reparse-symbol arg-sub-list) [5964 5976])
+                    ("iterations" variable (:type "int") (reparse-symbol arg-sub-list) [5977 5992])
+                    ("poly_n" variable (:type "int") (reparse-symbol arg-sub-list) [5993 6004])
+                    ("poly_sigma" variable (:type "double") (reparse-symbol arg-sub-list) [6045 6063])
+                    ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [6064 6075]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5775 6076])
+            ("cvEstimateRigidTransform" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("A" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5577 5592])
+                    ("B" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5593 5608])
+                    ("M" variable
+                       (:pointer 1
+                        :type ("CvMat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5647 5656])
+                    ("full_affine" variable (:type "int") (reparse-symbol arg-sub-list) [5657 5674]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5551 5675])
+            ("cvCalcAffineFlowPyrLK" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("prev" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4947 4966])
+                    ("curr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4967 4986])
+                    ("prev_pyr" variable
+                       (:pointer 1
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5023 5040])
+                    ("curr_pyr" variable
+                       (:pointer 1
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5041 5058])
+                    ("prev_features" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvPoint2D32f" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5095 5129])
+                    ("curr_features" variable
+                       (:pointer 1
+                        :type ("CvPoint2D32f" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5166 5194])
+                    ("matrices" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [5231 5247])
+                    ("count" variable (:type "int") (reparse-symbol arg-sub-list) [5248 5259])
+                    ("win_size" variable (:type ("CvSize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5296 5312])
+                    ("level" variable (:type "int") (reparse-symbol arg-sub-list) [5313 5324])
+                    ("status" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5361 5374])
+                    ("track_error" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [5375 5394])
+                    ("criteria" variable (:type ("CvTermCriteria" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5431 5455])
+                    ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [5456 5467]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4924 5468])
+            ("cvCalcOpticalFlowPyrLK" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("prev" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4169 4188])
+                    ("curr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4189 4208])
+                    ("prev_pyr" variable
+                       (:pointer 1
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4246 4263])
+                    ("curr_pyr" variable
+                       (:pointer 1
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4264 4281])
+                    ("prev_features" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvPoint2D32f" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4319 4353])
+                    ("curr_features" variable
+                       (:pointer 1
+                        :type ("CvPoint2D32f" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4391 4419])
+                    ("count" variable (:type "int") (reparse-symbol arg-sub-list) [4457 4473])
+                    ("win_size" variable (:type ("CvSize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4511 4530])
+                    ("level" variable (:type "int") (reparse-symbol arg-sub-list) [4568 4584])
+                    ("status" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4622 4639])
+                    ("track_error" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [4677 4699])
+                    ("criteria" variable (:type ("CvTermCriteria" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4737 4761])
+                    ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [4799 4816]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4145 4817])
+            ("CV_LKFLOW_GET_MIN_EIGENVALS" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [3785 3812])
+            ("CV_LKFLOW_INITIAL_GUESSES" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [3746 3771])
+            ("CV_LKFLOW_PYR_B_READY" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [3707 3728])
+            ("CV_LKFLOW_PYR_A_READY" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [3668 3689])
+            ("cvCalcOpticalFlowHS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("prev" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3466 3484])
+                    ("curr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3485 3503])
+                    ("use_previous" variable (:type "int") (reparse-symbol arg-sub-list) [3538 3555])
+                    ("velx" variable
+                       (:pointer 1
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3556 3568])
+                    ("vely" variable
+                       (:pointer 1
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3569 3581])
+                    ("lambda" variable (:type "double") (reparse-symbol arg-sub-list) [3616 3630])
+                    ("criteria" variable (:type ("CvTermCriteria" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3631 3656]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3445 3657])
+            ("cvCalcOpticalFlowBM" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("prev" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3115 3133])
+                    ("curr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3134 3152])
+                    ("block_size" variable (:type ("CvSize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3187 3205])
+                    ("shift_size" variable (:type ("CvSize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3206 3224])
+                    ("max_range" variable (:type ("CvSize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3259 3276])
+                    ("use_previous" variable (:type "int") (reparse-symbol arg-sub-list) [3277 3294])
+                    ("velx" variable
+                       (:pointer 1
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3329 3341])
+                    ("vely" variable
+                       (:pointer 1
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3342 3355]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3094 3356])
+            ("cvCalcOpticalFlowLK" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("prev" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2889 2907])
+                    ("curr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2908 2926])
+                    ("win_size" variable (:type ("CvSize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2961 2977])
+                    ("velx" variable
+                       (:pointer 1
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2978 2990])
+                    ("vely" variable
+                       (:pointer 1
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2991 3004]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2868 3005])
+            ("cv" type
+               (:members 
+                  ( ("updateMotionHistory" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("silhouette" variable (:type ("InputArray" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12439 12461])
+                            ("mhi" variable (:type ("InputOutputArray" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12462 12483])
+                            ("timestamp" variable (:type "double") (reparse-symbol arg-sub-list) [12523 12540])
+                            ("duration" variable (:type "double") (reparse-symbol arg-sub-list) [12541 12558]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [12413 12559])
+                    ("calcMotionGradient" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("mhi" variable (:type ("InputArray" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12680 12695])
+                            ("mask" variable (:type ("OutputArray" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12696 12713])
+                            ("orientation" variable (:type ("OutputArray" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12752 12776])
+                            ("delta1" variable (:type "double") (reparse-symbol arg-sub-list) [12815 12829])
+                            ("delta2" variable (:type "double") (reparse-symbol arg-sub-list) [12830 12844])
+                            ("apertureSize" variable (:type "int") (reparse-symbol arg-sub-list) [12883 12900]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [12655 12904])
+                    ("calcGlobalOrientation" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("orientation" variable (:type ("InputArray" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13027 13050])
+                            ("mask" variable (:type ("InputArray" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13051 13067])
+                            ("mhi" variable (:type ("InputArray" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13111 13126])
+                            ("timestamp" variable (:type "double") (reparse-symbol arg-sub-list) [13127 13144])
+                            ("duration" variable (:type "double") (reparse-symbol arg-sub-list) [13188 13205]))                          
+                        :type "double")
+                        (reparse-symbol namespacesubparts) [12997 13206])
+                    ("segmentMotion" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("mhi" variable (:type ("InputArray" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13240 13255])
+                            ("segmask" variable (:type ("OutputArray" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13256 13276])
+                            ("vector" variable (:type ("CV_OUT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13309 13329])
+                            ("" variable (:type ("boundingRects" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13330 13344])
+                            ("timestamp" variable (:type "double") (reparse-symbol arg-sub-list) [13377 13394])
+                            ("segThresh" variable (:type "double") (reparse-symbol arg-sub-list) [13395 13412]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [13221 13413])
+                    ("CamShift" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("probImage" variable (:type ("InputArray" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13514 13535])
+                            ("CV_IN_OUT" variable (:type ("CV_OUT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13536 13557])
+                            ("window" variable
+                               (:reference 1
+                                :type ("Rect" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13553 13566])
+                            ("criteria" variable (:type ("TermCriteria" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13602 13625]))                          
+                        :type ("RotatedRect" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [13492 13626])
+                    ("meanShift" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("probImage" variable (:type ("InputArray" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13721 13742])
+                            ("CV_IN_OUT" variable (:type ("CV_OUT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13743 13764])
+                            ("window" variable
+                               (:reference 1
+                                :type ("Rect" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13760 13773])
+                            ("criteria" variable (:type ("TermCriteria" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13802 13825]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [13706 13826])
+                    ("KalmanFilter" variable (:type ("CV_EXPORTS_W" type
+                         (:prototype t
+                          :type "class")
+                          nil nil)) (reparse-symbol namespacesubparts) [14119 15729])
+                    ("" type
+                       (:members 
+                          ( ("OPTFLOW_USE_INITIAL_FLOW" variable
+                               (:constant-flag t
+                                :default-value (15764 15765)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [15739 15765])
+                            ("OPTFLOW_FARNEBACK_GAUSSIAN" variable
+                               (:constant-flag t
+                                :default-value (15794 15797)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [15767 15797]))                          
+                        :type "enum")
+                        (reparse-symbol namespacesubparts) [15732 15800])
+                    ("calcOpticalFlowPyrLK" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("prevImg" variable (:type ("InputArray" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15916 15935])
+                            ("nextImg" variable (:type ("InputArray" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15936 15955])
+                            ("prevPts" variable (:type ("InputArray" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15983 16002])
+                            ("InputOutputArray" variable (:type ("CV_OUT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16003 16034])
+                            ("" variable (:type ("nextPts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16027 16035])
+                            ("status" variable (:type ("OutputArray" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16063 16082])
+                            ("err" variable (:type ("OutputArray" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16083 16099])
+                            ("winSize" variable (:type ("Size" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16127 16140])
+                            ("" variable (:type ("Size" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16140 16151])
+                            ("maxLevel" variable (:type "int") (reparse-symbol arg-sub-list) [16153 16166])
+                            ("criteria" variable (:type ("TermCriteria" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16196 16218])
+                            ("" variable (:type ("TermCriteria" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16218 16336])
+                            ("derivLambda" variable (:type "double") (reparse-symbol arg-sub-list) [16365 16384])
+                            ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [16416 16426])
+                            ("minEigThreshold" variable (:type "double") (reparse-symbol arg-sub-list) [16456 16479]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [15889 16485])
+                    ("calcOpticalFlowFarneback" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("prev" variable (:type ("InputArray" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16589 16605])
+                            ("next" variable (:type ("InputArray" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16606 16622])
+                            ("InputOutputArray" variable (:type ("CV_OUT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16650 16678])
+                            ("" variable (:type ("flow" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16674 16679])
+                            ("pyr_scale" variable (:type "double") (reparse-symbol arg-sub-list) [16680 16697])
+                            ("levels" variable (:type "int") (reparse-symbol arg-sub-list) [16698 16709])
+                            ("winsize" variable (:type "int") (reparse-symbol arg-sub-list) [16710 16722])
+                            ("iterations" variable (:type "int") (reparse-symbol arg-sub-list) [16750 16765])
+                            ("poly_n" variable (:type "int") (reparse-symbol arg-sub-list) [16766 16777])
+                            ("poly_sigma" variable (:type "double") (reparse-symbol arg-sub-list) [16778 16796])
+                            ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [16797 16808]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [16558 16809])
+                    ("estimateRigidTransform" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("src" variable (:type ("InputArray" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17005 17020])
+                            ("dst" variable (:type ("InputArray" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17021 17036])
+                            ("fullAffine" variable (:type "bool") (reparse-symbol arg-sub-list) [17078 17094]))                          
+                        :type ("Mat" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [16977 17095]))                  
+                :type "namespace")
+                nil [12318 17102]))          
+      :file "tracking.hpp"
+      :pointmax 17119
+      :fsize 17118
+      :lastmodtime '(20023 61993 0 0)
+      :unmatched-syntax '((symbol 16964 . 16976) (symbol 16545 . 16557) (number 16479 . 16483) (punctuation 16478 . 16479) (number 16426 . 16427) (punctuation 16425 . 16426) (number 16384 . 16387) (punctuation 16383 . 16384) (semantic-list 16230 . 16336) (punctuation 16217 . 16218) (number 16166 . 16167) (punctuation 16165 . 16166) (semantic-list 16144 . 16151) (punctuation 16139 . 16140) (symbol 15876 . 15888) (symbol 13693 . 13705) (symbol 13479 . 13491) (punctuation 13328 . 13329) (symbol 13208 . 13220) (symbol 12984 . 12996) (number 12900 . 12901) (punctuation 12899 . 12900) (symbol 12642 . 12654) (symbol 12400 . 12412) (semantic-list 12113 . 12127) (symbol 12108 . 12113) (semantic-list 11999 . 12005) (semantic-list 11879 . 11893) (symbol 11874 . 11879) (semantic-list 11754 . 11760) (symbol 11749 . 11754) (semantic-list 11707 . 11710) (semantic-list 11579 . 11590) (symbol 11574 . 11579) (semantic-list 9006 . 9011) (symbol 9001 . 9006) (semantic-list 8882 . 8888) (semantic-list 8703 . 8708) (symbol 8698 . 8703) (semantic-list 8081 . 8089) (symbol 8076 . 8081) (semantic-list 7729 . 7737) (symbol 7724 . 7729) (semantic-list 7533 . 7536) (semantic-list 7318 . 7324) (symbol 7313 . 7318) (semantic-list 7054 . 7060) (symbol 7049 . 7054) (semantic-list 5768 . 5774) (symbol 5763 . 5768) (semantic-list 5544 . 5549) (symbol 5539 . 5544) (semantic-list 4916 . 4922) (symbol 4911 . 4916) (semantic-list 4137 . 4143) (symbol 4132 . 4137) (semantic-list 3437 . 3443) (symbol 3432 . 3437) (semantic-list 3086 . 3092) (symbol 3081 . 3086) (semantic-list 2860 . 2866) (symbol 2855 . 2860))
+      :lexical-table 
+        '(("__OPENCV_TRACKING_HPP__")
+          ("cvKalmanUpdateByMeasurement" . ((symbol "cvKalmanCorrect" 12275 . 12290)))
+          ("cvKalmanUpdateByTime" . ((symbol "cvKalmanPredict" 12223 . 12238)))
+          ("CV_LKFLOW_PYR_A_READY" . ((number "1" 3696 . 3697)))
+          ("CV_LKFLOW_GET_MIN_EIGENVALS" . ((number "8" 3813 . 3814)))
+          ("CV_LKFLOW_PYR_B_READY" . ((number "2" 3735 . 3736)))
+          ("CV_LKFLOW_INITIAL_GUESSES" . ((number "4" 3774 . 3775)))
+          )
+)
+    (semanticdb-table "background_segm.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("__OPENCV_BACKGROUND_SEGM_HPP__" variable (:constant-flag t) nil [2205 2235])
+            ("opencv2/core/core.hpp" include nil nil [2237 2269])
+            ("cvSegmentFGMask" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("fgmask" variable
+                       (:pointer 1
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13680 13694])
+                    ("poly1Hull0" variable (:type "int") (reparse-symbol arg-sub-list) [13695 13720])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13710 13723])
+                    ("perimScale" variable (:type "float") (reparse-symbol arg-sub-list) [13756 13783])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13773 13788])
+                    ("storage" variable
+                       (:pointer 1
+                        :type ("CvMemStorage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13821 13853])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13843 13856])
+                    ("offset" variable (:type ("CvPoint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13889 13914])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13904 13928]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [13663 13930])
+            ("cvBGCodeBookClearStale" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("model" variable
+                       (:pointer 1
+                        :type ("CvBGCodeBookModel" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13458 13483])
+                    ("staleThresh" variable (:type "int") (reparse-symbol arg-sub-list) [13484 13500])
+                    ("roi" variable (:type ("CvRect" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13537 13558])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13548 13575])
+                    ("mask" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13613 13641])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13631 13644]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [13434 13647])
+            ("cvBGCodeBookDiff" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("model" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvBGCodeBookModel" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13283 13314])
+                    ("image" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13315 13334])
+                    ("fgmask" variable
+                       (:pointer 1
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13364 13378])
+                    ("roi" variable (:type ("CvRect" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13379 13400])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13390 13417]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [13265 13420])
+            ("cvBGCodeBookUpdate" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("model" variable
+                       (:pointer 1
+                        :type ("CvBGCodeBookModel" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13068 13093])
+                    ("image" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13094 13113])
+                    ("roi" variable (:type ("CvRect" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13146 13167])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13157 13184])
+                    ("mask" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CvArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13218 13246])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13236 13249]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [13048 13252])
+            ("cvReleaseBGCodeBookModel" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("model" variable
+                       (:pointer 2
+                        :type ("CvBGCodeBookModel" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13006 13033]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [12980 13034])
+            ("cvCreateBGCodeBookModel" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [12941 12967])
+            ("CvBGCodeBookModel" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :superclasses "CvBGCodeBookModel"
+                :typedef ("CvBGCodeBookModel" type (:type "struct") nil nil))
+                (reparse-symbol extern-c-contents) [12676 12913])
+            ("CvBGCodeBookModel" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("size" variable (:type ("CvSize" type (:type "class") nil nil)) (reparse-symbol classsubparts) [12715 12727])
+                    ("t" variable (:type "int") (reparse-symbol classsubparts) [12732 12738])
+                    ("cbBounds" variable
+                       (:dereference 1
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12743 12761])
+                    ("modMin" variable
+                       (:dereference 1
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12766 12782])
+                    ("modMax" variable
+                       (:dereference 1
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12787 12803])
+                    ("cbmap" variable
+                       (:pointer 2
+                        :type ("CvBGCodeBookElem" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12808 12833])
+                    ("storage" variable
+                       (:pointer 1
+                        :type ("CvMemStorage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12838 12860])
+                    ("freeList" variable
+                       (:pointer 1
+                        :type ("CvBGCodeBookElem" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12865 12892]))                  )
+                (reparse-symbol extern-c-contents) [12676 12913])
+            ("CvBGCodeBookElem" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :superclasses "CvBGCodeBookElem"
+                :typedef ("CvBGCodeBookElem" type (:type "struct") nil nil))
+                (reparse-symbol extern-c-contents) [12462 12674])
+            ("CvBGCodeBookElem" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("next" variable
+                       (:pointer 1
+                        :type ("CvBGCodeBookElem" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [12500 12530])
+                    ("tLastUpdate" variable (:type "int") (reparse-symbol classsubparts) [12535 12551])
+                    ("stale" variable (:type "int") (reparse-symbol classsubparts) [12556 12566])
+                    ("boxMin" variable
+                       (:dereference 1
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12571 12587])
+                    ("boxMax" variable
+                       (:dereference 1
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12592 12608])
+                    ("learnMin" variable
+                       (:dereference 1
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12613 12631])
+                    ("learnMax" variable
+                       (:dereference 1
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12636 12654]))                  )
+                (reparse-symbol extern-c-contents) [12462 12674])
+            ("cvCreateGaussianBGModel" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("first_frame" variable
+                       (:pointer 1
+                        :type ("IplImage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12365 12387])
+                    ("parameters" variable
+                       (:pointer 1
+                        :type ("CvGaussBGStatModelParams" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12404 12451])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12441 12457]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [12340 12459])
+            ("CvGaussBGModel" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :superclasses "CvGaussBGModel"
+                :typedef ("CvGaussBGModel" type (:type "struct") nil nil))
+                (reparse-symbol extern-c-contents) [12056 12267])
+            ("CvGaussBGModel" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("type" variable (:type "int") (reparse-symbol classsubparts) [12092 12115])
+                    ("release" variable (:type ("CvReleaseBGStatModel" type (:type "class") nil nil)) (reparse-symbol classsubparts) [12092 12115])
+                    ("update" variable (:type ("CvUpdateBGStatModel" type (:type "class") nil nil)) (reparse-symbol classsubparts) [12092 12115])
+                    ("background" variable
+                       (:pointer 1
+                        :type ("IplImage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12092 12115])
+                    ("foreground" variable
+                       (:pointer 1
+                        :type ("IplImage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12092 12115])
+                    ("layers" variable
+                       (:pointer 2
+                        :type ("IplImage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12092 12115])
+                    ("layer_count" variable (:type "int") (reparse-symbol classsubparts) [12092 12115])
+                    ("storage" variable
+                       (:pointer 1
+                        :type ("CvMemStorage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12092 12115])
+                    ("foreground_regions" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :type ("CvSeq" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12092 12118])
+                    ("params" variable (:type ("CvGaussBGStatModelParams" type (:type "class") nil nil)) (reparse-symbol classsubparts) [12123 12157])
+                    ("g_point" variable
+                       (:pointer 1
+                        :type ("CvGaussBGPoint" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12166 12201])
+                    ("countFrames" variable (:type "int") (reparse-symbol classsubparts) [12210 12249]))                  )
+                (reparse-symbol extern-c-contents) [12056 12267])
+            ("CvGaussBGPoint" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :superclasses "CvGaussBGPoint"
+                :typedef ("CvGaussBGPoint" type (:type "struct") nil nil))
+                (reparse-symbol extern-c-contents) [11973 12053])
+            ("CvGaussBGPoint" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("g_values" variable
+                       (:pointer 1
+                        :type ("CvGaussBGValues" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12009 12035]))                  )
+                (reparse-symbol extern-c-contents) [11973 12053])
+            ("CvGaussBGValues" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :superclasses "CvGaussBGValues"
+                :typedef ("CvGaussBGValues" type (:type "struct") nil nil))
+                (reparse-symbol extern-c-contents) [11779 11971])
+            ("CvGaussBGValues" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("match_sum" variable (:type "int") (reparse-symbol classsubparts) [11816 11838])
+                    ("weight" variable (:type "double") (reparse-symbol classsubparts) [11843 11862])
+                    ("variance" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [11867 11909])
+                    ("mean" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [11914 11952]))                  )
+                (reparse-symbol extern-c-contents) [11779 11971])
+            ("CvGaussBGStatModelParams" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :superclasses "CvGaussBGStatModelParams"
+                :typedef ("CvGaussBGStatModelParams" type (:type "struct") nil nil))
+                (reparse-symbol extern-c-contents) [11542 11777])
+            ("CvGaussBGStatModelParams" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("win_size" variable (:type "int") (reparse-symbol classsubparts) [11592 11609])
+                    ("n_gauss" variable (:type "int") (reparse-symbol classsubparts) [11644 11660])
+                    ("bg_threshold" variable (:type "double") (reparse-symbol classsubparts) [11665 11710])
+                    ("std_threshold" variable (:type "double") (reparse-symbol classsubparts) [11665 11710])
+                    ("minArea" variable (:type "double") (reparse-symbol classsubparts) [11665 11710])
+                    ("weight_init" variable (:type "double") (reparse-symbol classsubparts) [11715 11750])
+                    ("variance_init" variable (:type "double") (reparse-symbol classsubparts) [11715 11750]))                  )
+                (reparse-symbol extern-c-contents) [11542 11777])
+            ("CV_BGFG_MOG_NCOLORS" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [11502 11521])
+            ("CV_BGFG_MOG_MINAREA" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [11450 11469])
+            ("CV_BGFG_MOG_SIGMA_INIT" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [11402 11424])
+            ("CV_BGFG_MOG_WEIGHT_INIT" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [11352 11375])
+            ("CV_BGFG_MOG_NGAUSSIANS" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [11256 11278])
+            ("CV_BGFG_MOG_WINDOW_SIZE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [11153 11176])
+            ("CV_BGFG_MOG_STD_THRESHOLD" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [11076 11101])
+            ("CV_BGFG_MOG_BACKGROUND_THRESHOLD" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [10972 11004])
+            ("CV_BGFG_MOG_MAX_NGAUSSIANS" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [10864 10890])
+            ("cvCreateFGDStatModel" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("first_frame" variable
+                       (:pointer 1
+                        :type ("IplImage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10362 10384])
+                    ("parameters" variable
+                       (:pointer 1
+                        :type ("CvFGDStatModelParams" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10405 10448])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10438 10454]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10340 10456])
+            ("CvFGDStatModel" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :superclasses "CvFGDStatModel"
+                :typedef ("CvFGDStatModel" type (:type "struct") nil nil))
+                (reparse-symbol extern-c-contents) [10035 10292])
+            ("CvFGDStatModel" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("type" variable (:type "int") (reparse-symbol classsubparts) [10071 10094])
+                    ("release" variable (:type ("CvReleaseBGStatModel" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10071 10094])
+                    ("update" variable (:type ("CvUpdateBGStatModel" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10071 10094])
+                    ("background" variable
+                       (:pointer 1
+                        :type ("IplImage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10071 10094])
+                    ("foreground" variable
+                       (:pointer 1
+                        :type ("IplImage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10071 10094])
+                    ("layers" variable
+                       (:pointer 2
+                        :type ("IplImage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10071 10094])
+                    ("layer_count" variable (:type "int") (reparse-symbol classsubparts) [10071 10094])
+                    ("storage" variable
+                       (:pointer 1
+                        :type ("CvMemStorage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10071 10094])
+                    ("foreground_regions" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :type ("CvSeq" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10071 10097])
+                    ("pixel_stat" variable
+                       (:pointer 1
+                        :type ("CvBGPixelStat" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10102 10136])
+                    ("Ftd" variable
+                       (:pointer 1
+                        :type ("IplImage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10141 10168])
+                    ("Fbd" variable
+                       (:pointer 1
+                        :type ("IplImage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10173 10200])
+                    ("prev_frame" variable
+                       (:pointer 1
+                        :type ("IplImage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10205 10239])
+                    ("params" variable (:type ("CvFGDStatModelParams" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10244 10274]))                  )
+                (reparse-symbol extern-c-contents) [10035 10292])
+            ("CvBGPixelStat" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :superclasses "CvBGPixelStat"
+                :typedef ("CvBGPixelStat" type (:type "struct") nil nil))
+                (reparse-symbol extern-c-contents) [9758 10032])
+            ("CvBGPixelStat" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("Pbc" variable (:type "float") (reparse-symbol classsubparts) [9793 9819])
+                    ("Pbcc" variable (:type "float") (reparse-symbol classsubparts) [9824 9851])
+                    ("ctable" variable
+                       (:pointer 1
+                        :type ("CvBGPixelCStatTable" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9856 9885])
+                    ("cctable" variable
+                       (:pointer 1
+                        :type ("CvBGPixelCCStatTable" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9890 9920])
+                    ("is_trained_st_model" variable (:type ("uchar" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9925 9967])
+                    ("is_trained_dyn_model" variable (:type ("uchar" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9972 10015]))                  )
+                (reparse-symbol extern-c-contents) [9758 10032])
+            ("CvBGPixelCCStatTable" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :superclasses "CvBGPixelCCStatTable"
+                :typedef ("CvBGPixelCCStatTable" type (:type "struct") nil nil))
+                (reparse-symbol extern-c-contents) [9642 9756])
+            ("CvBGPixelCCStatTable" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("Pv" variable (:type "float") (reparse-symbol classsubparts) [9684 9707])
+                    ("Pvb" variable (:type "float") (reparse-symbol classsubparts) [9684 9707])
+                    ("v" variable
+                       (:dereference 1
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9712 9732]))                  )
+                (reparse-symbol extern-c-contents) [9642 9756])
+            ("CvBGPixelCStatTable" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :superclasses "CvBGPixelCStatTable"
+                :typedef ("CvBGPixelCStatTable" type (:type "struct") nil nil))
+                (reparse-symbol extern-c-contents) [9528 9640])
+            ("CvBGPixelCStatTable" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("Pv" variable (:type "float") (reparse-symbol classsubparts) [9569 9592])
+                    ("Pvb" variable (:type "float") (reparse-symbol classsubparts) [9569 9592])
+                    ("v" variable
+                       (:dereference 1
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9597 9617]))                  )
+                (reparse-symbol extern-c-contents) [9528 9640])
+            ("CvFGDStatModelParams" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :superclasses "CvFGDStatModelParams"
+                :typedef ("CvFGDStatModelParams" type (:type "struct") nil nil))
+                (reparse-symbol extern-c-contents) [7580 9526])
+            ("CvFGDStatModelParams" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("Lc" variable (:type "int") (reparse-symbol classsubparts) [7622 7632])
+                    ("N1c" variable (:type "int") (reparse-symbol classsubparts) [7727 7738])
+                    ("N2c" variable (:type "int") (reparse-symbol classsubparts) [7843 7854])
+                    ("Lcc" variable (:type "int") (reparse-symbol classsubparts) [8051 8062])
+                    ("N1cc" variable (:type "int") (reparse-symbol classsubparts) [8170 8182])
+                    ("N2cc" variable (:type "int") (reparse-symbol classsubparts) [8298 8310])
+                    ("is_obj_without_holes" variable (:type "int") (reparse-symbol classsubparts) [8521 8549])
+                    ("perform_morphing" variable (:type "int") (reparse-symbol classsubparts) [8631 8655])
+                    ("alpha1" variable (:type "float") (reparse-symbol classsubparts) [8835 8849])
+                    ("alpha2" variable (:type "float") (reparse-symbol classsubparts) [8944 8958])
+                    ("alpha3" variable (:type "float") (reparse-symbol classsubparts) [9053 9067])
+                    ("delta" variable (:type "float") (reparse-symbol classsubparts) [9168 9181])
+                    ("T" variable (:type "float") (reparse-symbol classsubparts) [9269 9278])
+                    ("minArea" variable (:type "float") (reparse-symbol classsubparts) [9400 9415]))                  )
+                (reparse-symbol extern-c-contents) [7580 9526])
+            ("CV_BGFG_FGD_BG_UPDATE_TRESH" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6867 6894])
+            ("CV_BGFG_FGD_MINAREA" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6824 6843])
+            ("CV_BGFG_FGD_T" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6781 6794])
+            ("CV_BGFG_FGD_DELTA" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6741 6758])
+            ("CV_BGFG_FGD_ALPHA_3" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6698 6717])
+            ("CV_BGFG_FGD_ALPHA_2" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6580 6599])
+            ("CV_BGFG_FGD_ALPHA_1" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6422 6441])
+            ("CV_BGFG_FGD_N2CC" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6330 6346])
+            ("CV_BGFG_FGD_N1CC" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6290 6306])
+            ("CV_BGFG_FGD_LCC" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6250 6265])
+            ("CV_BGFG_FGD_N2C" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6209 6224])
+            ("CV_BGFG_FGD_N1C" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6169 6184])
+            ("CV_BGFG_FGD_LC" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6128 6142])
+            ("cvChangeDetection" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("prev_frame" variable
+                       (:pointer 1
+                        :type ("IplImage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5881 5903])
+                    ("curr_frame" variable
+                       (:pointer 1
+                        :type ("IplImage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5935 5957])
+                    ("change_mask" variable
+                       (:pointer 1
+                        :type ("IplImage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5989 6013]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5862 6014])
+            ("cvRefineForegroundMaskBySegm" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("segments" variable
+                       (:pointer 1
+                        :type ("CvSeq" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5761 5777])
+                    ("bg_model" variable
+                       (:pointer 1
+                        :type ("CvBGStatModel" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5778 5804]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5731 5805])
+            ("cvUpdateBGStatModel" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("current_frame" variable
+                       (:pointer 1
+                        :type ("IplImage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5285 5309])
+                    ("bg_model" variable
+                       (:pointer 1
+                        :type ("CvBGStatModel" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5310 5335])
+                    ("learningRate" variable (:type "double") (reparse-symbol arg-sub-list) [5368 5398])
+                    ("" variable (:type ("CV_DEFAULT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5388 5402]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5264 5404])
+            ("cvReleaseBGStatModel" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("bg_model" variable
+                       (:pointer 2
+                        :type ("CvBGStatModel" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5148 5174]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5126 5175])
+            ("CvBGStatModel" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :superclasses "CvBGStatModel"
+                :typedef ("CvBGStatModel" type (:type "struct") nil nil))
+                (reparse-symbol extern-c-contents) [4990 5068])
+            ("CvBGStatModel" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("type" variable (:type "int") (reparse-symbol classsubparts) [5025 5048])
+                    ("release" variable (:type ("CvReleaseBGStatModel" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5025 5048])
+                    ("update" variable (:type ("CvUpdateBGStatModel" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5025 5048])
+                    ("background" variable
+                       (:pointer 1
+                        :type ("IplImage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5025 5048])
+                    ("foreground" variable
+                       (:pointer 1
+                        :type ("IplImage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5025 5048])
+                    ("layers" variable
+                       (:pointer 2
+                        :type ("IplImage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5025 5048])
+                    ("layer_count" variable (:type "int") (reparse-symbol classsubparts) [5025 5048])
+                    ("storage" variable
+                       (:pointer 1
+                        :type ("CvMemStorage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5025 5048])
+                    ("foreground_regions" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :type ("CvSeq" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5025 5051]))                  )
+                (reparse-symbol extern-c-contents) [4990 5068])
+            ("CV_BG_STAT_MODEL_FIELDS" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [4153 4176])
+            ("CvBGStatModel" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :prototype t)
+                (reparse-symbol extern-c-contents) [3869 3890])
+            ("CV_BG_MODEL_FGD_SIMPLE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [3843 3865])
+            ("CV_BG_MODEL_MOG" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [3784 3799])
+            ("CV_BG_MODEL_FGD" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [3757 3772])
+            ("cv" type
+               (:members 
+                  ( ("BackgroundSubtractor" variable (:type ("CV_EXPORTS_W" type
+                         (:prototype t
+                          :type "class")
+                          nil nil)) (reparse-symbol namespacesubparts) [14161 14667])
+                    ("BackgroundSubtractor" variable (:type "int") (reparse-symbol namespacesubparts) [15140 15976])
+                    ("BackgroundSubtractor" variable (:type "int") (reparse-symbol namespacesubparts) [16031 19651]))                  
+                :type "namespace")
+                nil [13954 19663]))          
+      :file "background_segm.hpp"
+      :pointmax 19679
+      :fsize 19678
+      :lastmodtime '(19959 14816 0 0)
+      :unmatched-syntax '((PUBLIC 16024 . 16030) (punctuation 16022 . 16023) (symbol 15997 . 16021) (symbol 15986 . 15996) (CLASS 15980 . 15985) (PUBLIC 15133 . 15139) (punctuation 15131 . 15132) (symbol 15107 . 15130) (symbol 15094 . 15106) (CLASS 15088 . 15093) (semantic-list 13914 . 13928) (semantic-list 13853 . 13856) (semantic-list 13783 . 13788) (semantic-list 13720 . 13723) (semantic-list 13654 . 13662) (symbol 13649 . 13654) (semantic-list 13641 . 13644) (semantic-list 13558 . 13575) (semantic-list 13427 . 13433) (symbol 13422 . 13427) (semantic-list 13400 . 13417) (semantic-list 13259 . 13264) (symbol 13254 . 13259) (semantic-list 13246 . 13249) (semantic-list 13167 . 13184) (semantic-list 13041 . 13047) (symbol 13036 . 13041) (semantic-list 12973 . 12979) (symbol 12968 . 12973) (semantic-list 12920 . 12940) (symbol 12915 . 12920) (semantic-list 12451 . 12457) (semantic-list 12323 . 12339) (symbol 12318 . 12323) (spp-arg-list nil 12092 . 12115) (semantic-list 10448 . 10454) (semantic-list 10323 . 10339) (symbol 10318 . 10323) (spp-arg-list nil 10071 . 10094) (semantic-list 5855 . 5860) (symbol 5850 . 5855) (semantic-list 5724 . 5730) (symbol 5719 . 5724) (semantic-list 5398 . 5402) (semantic-list 5258 . 5263) (symbol 5253 . 5258) (semantic-list 5119 . 5125) (symbol 5114 . 5119) (spp-arg-list nil 5025 . 5048) (punctuation 4142 . 4143) (semantic-list 4019 . 4142) (semantic-list 3987 . 4019) (INT 3983 . 3986) (TYPEDEF 3975 . 3982) (punctuation 3973 . 3974) (semantic-list 3938 . 3973) (semantic-list 3905 . 3938) (VOID 3900 . 3904) (TYPEDEF 3892 . 3899))
+      :lexical-table 
+        '(("CV_BGFG_FGD_N1C" . ((number "15" 6197 . 6199)))
+          ("CV_BGFG_MOG_BACKGROUND_THRESHOLD" . ((number "0.7" 11009 . 11012)))
+          ("CV_BG_STAT_MODEL_FIELDS" (spp-arg-list nil 4176 . 4178) . 
+              ((INT "int" 4235 . 4238) (symbol "type" 4251 . 4255) (punctuation ";" 4255 . 4256) (symbol "CvReleaseBGStatModel" 4321 . 4341) (symbol "release" 4342 . 4349) (punctuation ";" 4349 . 4350) (symbol "CvUpdateBGStatModel" 4407 . 4426) (symbol "update" 4427 . 4433) (punctuation ";" 4433 . 4434) (symbol "IplImage" 4493 . 4501) (punctuation "*" 4501 . 4502) (symbol "background" 4509 . 4519) (punctuation ";" 4519 . 4520) (symbol "IplImage" 4579 . 4587) (punctuation "*" 4587 . 4588) (symbol "foreground" 4595 . 4605) (punctuation ";" 4605 . 4606) (symbol "IplImage" 4665 . 4673) (punctuation "*" 4673 . 4674) (punctuation "*" 4674 . 4675) (symbol "layers" 4681 . 4687) (punctuation ";" 4687 . 4688) (INT "int" 4751 . 4754) (symbol "layer_count" 4767 . 4778) (punctuation ";" 4778 . 4779) (symbol "CvMemStorage" 4837 . 4849) (punctuation "*" 4849 . 4850) (symbol "storage" 4853 . 4860) (punctuation ";" 4860 . 4861) (symbol "CvSeq" 4923 . 4928) (punctuation "*" 4928 . 4929) (symbol "foreground_regions" 4939 . 4957)))
+          ("CV_BGFG_FGD_LC" . ((number "128" 6156 . 6159)))
+          ("CV_BGFG_MOG_WINDOW_SIZE" . ((number "200" 11190 . 11193)))
+          ("CV_BG_MODEL_MOG" . ((number "1" 3801 . 3802)))
+          ("CV_BG_MODEL_FGD_SIMPLE" . ((number "2" 3866 . 3867)))
+          ("CV_BGFG_FGD_N2C" . ((number "25" 6237 . 6239)))
+          ("CV_BGFG_FGD_T" . ((number "0.9f" 6809 . 6813)))
+          ("CV_BGFG_FGD_MINAREA" . ((number "15.f" 6852 . 6856)))
+          ("__OPENCV_BACKGROUND_SEGM_HPP__")
+          ("CV_BG_MODEL_FGD" . ((number "0" 3774 . 3775)))
+          ("CV_BGFG_FGD_N2CC" . ((number "40" 6358 . 6360)))
+          ("CV_BGFG_FGD_ALPHA_1" . ((number "0.1f" 6450 . 6454)))
+          ("CV_BGFG_FGD_DELTA" . ((number "2" 6769 . 6770)))
+          ("CV_BGFG_MOG_WEIGHT_INIT" . ((number "0.05" 11389 . 11393)))
+          ("CV_BGFG_FGD_ALPHA_2" . ((number "0.005f" 6608 . 6614)))
+          ("CV_BGFG_FGD_ALPHA_3" . ((number "0.1f" 6726 . 6730)))
+          ("CV_BGFG_MOG_MAX_NGAUSSIANS" . ((number "500" 10891 . 10894)))
+          ("CV_BGFG_MOG_SIGMA_INIT" . ((number "30" 11439 . 11441)))
+          ("CV_BGFG_MOG_MINAREA" . ((number "15.f" 11487 . 11491)))
+          ("CV_BGFG_FGD_BG_UPDATE_TRESH" . ((number "0.5f" 6895 . 6899)))
+          ("CV_BGFG_FGD_N1CC" . ((number "25" 6318 . 6320)))
+          ("CV_BGFG_FGD_LCC" . ((number "64" 6278 . 6280)))
+          ("CV_BGFG_MOG_NGAUSSIANS" . ((number "5" 11293 . 11294)))
+          ("CV_BGFG_MOG_STD_THRESHOLD" . ((number "2.5" 11113 . 11116)))
+          ("CV_BGFG_MOG_NCOLORS" . ((number "3" 11539 . 11540)))
+          )
+))
+  :file "!usr!include!opencv2!video!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

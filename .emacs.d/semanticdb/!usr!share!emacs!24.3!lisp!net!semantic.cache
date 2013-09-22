@@ -1,0 +1,16 @@
+;; Object net/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "net/"
+  :tables
+  (list
+    (semanticdb-table "tramp-loaddefs.el"
+      :major-mode 'emacs-lisp-mode
+      :tags nil
+      :file "tramp-loaddefs.el"
+      :pointmax 35761
+      :fsize 35760
+      :lastmodtime '(21013 57286 0 0)
+      :unmatched-syntax nil))
+  :file "!usr!share!emacs!24.3!lisp!net!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

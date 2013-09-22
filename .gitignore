@@ -1,17 +1,18 @@
-# All Ignore
-*
+# # All Ignore
+# *
 
 
-# Except
-# Emacs
-!/.emacs.d/init.el
-!/.emacs.d/conf
-!/.emacs.d/elisp
-!/.emacs.d/public_repos
+# # Except
+# # Emacs
+# !/.emacs.d/init.el
+# !/.emacs.d/conf
+# !/.emacs.d/elisp
+# !/.emacs.d/public_repos
 
-!/.bashrc
-!/.gitconfig
-!/.gitignore
-!/.screenrc
-!/.minttyrc
-.
+# !/.bashrc
+# |/.zshrc
+# !/.gitconfig
+# !/.gitignore
+# !/.screenrc
+# !/.minttyrc
+# .
