@@ -1,10 +1,4 @@
 #alias emacs='open -a emacs'
-export PATH=$PATH:/Users/masahiko/Qt5.0.2/5.0.2/clang_64/bin
-export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
-export HOMEBREW_CC="llvm"
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin
-export OPENNI2_INCLUDE=/Users/masahiko/Library/openni/OpenNI-2.1.0/Include
-export OPENNI2_REDIST=/Users/masahiko/Library/openni/OpenNI-2.1.0/Redist
 #export PYTHONSTARTUP=$PYTHONSTARTUP:$HOME/.pythonrc.py python
 
 autoload -U compinit && compinit
@@ -13,12 +7,12 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z} r:|[-_.]=**'
 # プロンプトの設定
 nprom () {
     setopt prompt_subst
-    local rbase=$'%{\e[33m%}[%%{\e[m%}' lf=$'\n'
+    local rbase=$'%{\e[33m%}[%~]%{\e[m%}' lf=$'\n'
     local pct=$'%0(?||%18(?||%{\e[31m%}))%#%{\e[m%}'
     RPROMPT="%9(~||$rbase)"
     case "$USER" in
-	yatex)PROMPT=$'%{\e[33m%}%U%m{%n}%%%{\e[m%}%u ' ;;
-	java)PROMPT=$'%{\e[36m%}%U%m{%n}%%%{\e[m%}%u ' ;;
+      yatex)	PROMPT=$'%{\e[33m%}%U%m{%n}%%%{\e[m%}%u ' ;;
+      java)	PROMPT=$'%{\e[36m%}%U%m{%n}%%%{\e[m%}%u ' ;;
       *)
     local pbase=$'%{\e[$[32+RANDOM%5]m%}%U%B%m{%n}%b'"$pct%u "
     PROMPT="%9(~|$rbase$lf|)$pbase"
@@ -27,6 +21,27 @@ nprom () {
     [[ "$TERM" = "screen" ]] && RPROMPT="[%U%~%u]"
 }
 nprom
+
+## Default shell configuration
+#
+# set prompt
+#
+# case ${UID} in
+# 0)
+#     PROMPT="%B%{^[[31m%}%/#%{^[[m%}%b "
+#     PROMPT2="%B%{^[[31m%}%_#%{^[[m%}%b "
+#     SPROMPT="%B%{^[[31m%}%r is correct? [n,y,a,e]:%{^[[m%}%b "
+#     [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] && 
+#         PROMPT="%{^[[37m%}${HOST%%.*} ${PROMPT}"
+#     ;;
+# *)
+#     PROMPT="%{^[[31m%}%/%%%{^[[m%} "
+#     PROMPT2="%{^[[31m%}%_%%%{^[[m%} "
+#     SPROMPT="%{^[[31m%}%r is correct? [n,y,a,e]:%{^[[m%} "
+#     [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] && 
+#         PROMPT="%{^[[37m%}${HOST%%.*} ${PROMPT}"
+#     ;;
+# esac
 
 # コマンド履歴
 HISTFILE=~/.zsh_history
@@ -70,4 +85,3 @@ if [ -z "$TMUX" ]; then
 	tmux
 fi
 
-alias emacs='/Users/masahiko/Programs/emacs/emacs/nextstep/Emacs.app/Contents/MacOS/Emacs -nw'
