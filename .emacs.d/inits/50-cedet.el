@@ -1,5 +1,5 @@
 ;; cedet
-(load-file "~/.emacs.d/cedet-bzr/trunk/cedet-devel-load.el")
+
 (semantic-load-enable-excessive-code-helpers)
 
 (custom-set-variables

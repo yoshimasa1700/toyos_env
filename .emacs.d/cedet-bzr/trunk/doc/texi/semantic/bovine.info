@@ -1,6 +1,7 @@
-This is bovine.info, produced by makeinfo version 4.13 from bovine.texi.
+これは bovine.info、bovine.texi より makeinfo バージョン 4.8
+によって作成されました。
 
-Copyright (C) 1999-2004, 2012-2013 Free Software Foundation, Inc.
+   Copyright (C) 1999-2004, 2012-2013 Free Software Foundation, Inc.
 
      Permission is granted to copy, distribute and/or modify this
      document under the terms of the GNU Free Documentation License,
@@ -197,7 +198,7 @@ expanded form:
    Thus, from the bovinator point of view, the COMPONENTS part of a
 rule is made up of symbols and strings.  A string in the mix means that
 the previous symbol must have the additional constraint of exactly
-matching it, as described in *note How Lexical Tokens Match::.
+matching it, as described in *Note How Lexical Tokens Match::.
 
 *Please Note:*
      For the bovinator, this task was mixed into the language
@@ -862,14 +863,14 @@ permit their use in free software.
 
 
 Tag Table:
-Node: Top845
-Node: Starting Rules2482
-Node: Bovine Grammar Rules3480
-Node: How Lexical Tokens Match5002
-Node: Grammar-to-Lisp Details6520
-Node: Order of components in rules7693
-Node: Optional Lambda Expression8238
-Node: Bovine Examples11897
-Node: GNU Free Documentation License12846
+Node: Top884
+Node: Starting Rules2521
+Node: Bovine Grammar Rules3519
+Node: How Lexical Tokens Match5041
+Node: Grammar-to-Lisp Details6559
+Node: Order of components in rules7732
+Node: Optional Lambda Expression8277
+Node: Bovine Examples11936
+Node: GNU Free Documentation License12885
 
 End Tag Table

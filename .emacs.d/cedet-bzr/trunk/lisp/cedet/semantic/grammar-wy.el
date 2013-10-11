@@ -2,8 +2,8 @@
 
 ;; Copyright (C) 2002, 2003, 2004 David Ponce
 
-;; Author: Masahiko Toyoshi <masahiko@MasaPC>
-;; Created: 2013-09-05 23:10:35+0900
+;; Author: Masahiko Toyoshi <masahiko@Masahiko-no-MacBook-Air.local>
+;; Created: 2013-08-06 12:52:05+0900
 ;; Keywords: syntax
 ;; X-RCS: $Id$
 

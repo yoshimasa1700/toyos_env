@@ -2,8 +2,8 @@
 
 ;; Copyright (C) 2002-2012 Free Software Foundation, Inc.
 
-;; Author: Masahiko Toyoshi <masahiko@MasaPC>
-;; Created: 2013-09-05 23:10:42+0900
+;; Author: Masahiko Toyoshi <masahiko@Masahiko-no-MacBook-Air.local>
+;; Created: 2013-08-06 12:52:48+0900
 ;; Keywords: syntax
 ;; X-RCS: $Id$
 

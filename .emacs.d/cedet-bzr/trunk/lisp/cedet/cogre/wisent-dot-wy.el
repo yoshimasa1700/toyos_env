@@ -2,8 +2,8 @@
 
 ;; Copyright (C) 2003, 2004, 2009 Eric M. Ludlam
 
-;; Author: Masahiko Toyoshi <masahiko@MasaPC>
-;; Created: 2013-09-05 23:11:02+0900
+;; Author: Masahiko Toyoshi <masahiko@Masahiko-no-MacBook-Air.local>
+;; Created: 2013-08-06 12:54:35+0900
 ;; Keywords: syntax
 ;; X-RCS: $Id$
 

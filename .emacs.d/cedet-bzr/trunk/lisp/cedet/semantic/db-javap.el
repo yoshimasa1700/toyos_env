@@ -880,12 +880,6 @@ into the tags)"
 	(setq semanticdb-javap-java-lang-classes-map lang-map)
 	lang-map))))
 
-(defun semanticdb-javap-file-is-jar (file-name)
-  "Returns true if the file is java archive"
-  (let ((file-ext (downcase (file-name-extension file-name))))
-    (or (string= "jar" file-ext)
-	(string= "zip" file-ext))))
-
 (defun semanticdb-javap-classpath-objects (buffer)
   "Return the classpath for BUFFER as a list of semanticdb objects and strings.
 Strings are directories which can be searched.  Database objects
@@ -918,7 +912,7 @@ represent jar files."
 	 ((file-directory-p P)
 	  (push P cpaths))
 	 ;; Jar files need a special database
-	 ((and (semanticdb-javap-file-is-jar P)
+	 ((and (string= "jar" (file-name-extension P))
 	       (file-exists-p P))
 	  (push
 	   (semanticdb-create-database semanticdb-java-jar-database P)

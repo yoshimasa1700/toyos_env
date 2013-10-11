@@ -1,6 +1,7 @@
-This is ede.info, produced by makeinfo version 4.13 from ede.texi.
+これは ede.info、ede.texi より makeinfo バージョン 4.8
+によって作成されました。
 
-This file describes EDE, the Emacs Development Environment.
+   This file describes EDE, the Emacs Development Environment.
 
    Copyright (C) 1998-2001, 2004-2005, 2008-2013  Free Software
 Foundation, Inc.
@@ -508,7 +509,7 @@ project reloads.
    Projects which are not stored on disk WILL NOT restore your project
 local variables later.
 
-   You can use *note Customize Features:: to of the project to edit the
+   You can use *Note Customize Features:: to of the project to edit the
 project local variables.  They are under the 'Settings' group as
 "Project Local Variables".
 
@@ -524,7 +525,7 @@ subdirectory.
    You can use project local variables to set any Emacs variable so that
 buffers belonging to different projects can have different settings.
 
-   NOTE: When you use project-local variables with *note ede-cpp-root::,
+   NOTE: When you use project-local variables with *Note ede-cpp-root::,
 the format is an association list.  For example:
 
      (ede-cpp-root-project "SOMENAME"
@@ -533,7 +534,7 @@ the format is an association list.  For example:
                             '((grep-command . "grep -nHi -e ")
                               (compile-command . "make -f MyCustomMakefile all")))
 
-   The same is true when you use project-local variables with *note
+   The same is true when you use project-local variables with *Note
 ede-java-root::.  For example:
 
      (ede-java-root-project "SOMENAME"
@@ -652,7 +653,7 @@ somewhere in your project.
    EDE can use external tools to help with file finding.  To do this,
 customize `ede-locate-setup-options'.
 
- -- Variable: ede-locate-setup-options
+ -- 変数: ede-locate-setup-options
      List of locate objects to try out by default.  Listed in order of
      preference.  If the first item cannot be used in a particular
      project, then the next one is tried.  It is always assumed that
@@ -715,7 +716,7 @@ running Emacs to make sure the project is identified correctly.
    Android projects can be created with `ede-new' but depend on a
 correctly configured Android SDK via CEDET support.
 
- -- Function: cedet-android-sdk-root
+ -- 機能: cedet-android-sdk-root
      The root to the android SDK.
 
    Android projects support different configurations including compile,
@@ -837,7 +838,7 @@ DIR
      The directory root for this cpp-root project.
 
    When creating a project with `ede-cpp-root', you can get additional
-configurations via *note Project Local Variables::.  Be aware that the
+configurations via *Note Project Local Variables::.  Be aware that the
 format for project local variables is an association list.  You cannot
 use `M-x ede-set' and have your project local variables persist between
 sessions.
@@ -894,7 +895,7 @@ File: ede.info,  Node: ede-java-root,  Next: ede-emacs,  Prev: ede-cpp-root,  Up
 7.5.2 ede-java-root
 -------------------
 
-Much like the project type *note ede-cpp-root::, the java variant is
+Much like the project type *Note ede-cpp-root::, the java variant is
 can be setup in your `.emacs' file and just marks a directory as the
 root of a java source tree.
 
@@ -902,7 +903,7 @@ root of a java source tree.
 projects.  In particular, you can use it to control your classpath at
 both the system level, and for your project.  If it is insufficient,
 you can subclass `ede-java-root-project' and add your own tweaks in
-just a few lines.  See *note ede-cpp-root:: for an example using the
+just a few lines.  See *Note ede-cpp-root:: for an example using the
 C++ variant.
 
    In the most basic case, add this to your `.emacs' file, modifying
@@ -961,7 +962,7 @@ DIR
      The directory root for this java-root project.
 
    If you would like to create your Java projects dynamically, instead
-of putting them all in your `.emacs', you can do that too.  See *note
+of putting them all in your `.emacs', you can do that too.  See *Note
 ede-cpp-root:: for details that can be applied to this project type.
 
 
@@ -996,7 +997,7 @@ File: ede.info,  Node: ede-generic-project,  Next: Custom Locate,  Prev: ede-lin
 
 The `ede-generic-project' is a project system that makes it easy to
 wrap up different kinds of build systems as an EDE project.  Projects
-such as *note ede-emacs:: require coding skills to create.  Generic
+such as *Note ede-emacs:: require coding skills to create.  Generic
 projects also require writing Emacs Lisp code, but the requirements are
 minimal.  You can then use `customize-project' to configure build
 commands, includes, and other options for that project.  The
@@ -1060,7 +1061,7 @@ however, EDE can use it.
 
    To enable one of these tools, set the variable
 `ede-locate-setup-options' with the names of different locate objects.
-*note Miscellaneous commands::.
+*Note Miscellaneous commands::.
 
    Configure this in your `.emacs' before loading in CEDET or EDE.  If
 you want to add support for GNU Global, your configuration would look
@@ -1119,7 +1120,7 @@ fields to track important information.
    If you are building currently unsupported code into a program or
 shared library, it is unlikely you need a new target at all.  Instead
 you would need to create a new compiler or linker object that compiles
-source code of the desired type. *note Compiler and Linker objects::.
+source code of the desired type. *Note Compiler and Linker objects::.
 
    Once your new class exists, you will want to fill in some basic
 methods.  See the `ede-skel.el' file for examples of these.  The files
@@ -4471,79 +4472,79 @@ permit their use in free software.
 
 
 Tag Table:
-Node: Top914
-Node: EDE Project Concepts2729
-Node: EDE Mode4105
-Node: Quick Start4720
-Node: Creating a project12149
-Node: Modifying your project14153
-Node: Add/Remove target14711
-Node: Add/Remove files15382
-Node: Customize Features16291
-Node: Project Local Variables17271
-Node: EDE Project Features19150
-Node: Changing Compilers and Flags19841
-Node: Configurations20793
-Node: Building and Debugging21677
-Node: Miscellaneous commands22264
-Ref: ede-locate-setup-options23084
-Node: Make and Automake projects23991
-Node: Automake direct projects24643
-Node: Android projects25237
-Ref: cedet-android-sdk-root25824
-Node: Arduino projects26057
-Node: Simple projects26665
-Node: ede-cpp-root27618
-Node: ede-java-root32842
-Node: ede-emacs35824
-Node: ede-linux36195
-Node: ede-generic-project36583
-Node: Custom Locate38605
-Node: Extending EDE40187
-Node: Development Overview42897
-Node: Detecting a Project47164
-Node: User interface methods50214
-Node: Base project methods51442
-Node: Sourcecode objects52816
-Node: Compiler and Linker objects54564
-Node: Project56843
-Node: ede-project-placeholder57170
-Node: ede-project59174
-Node: ede-cpp-root-project68140
-Node: ede-simple-project72098
-Node: ede-simple-base-project72680
-Node: ede-proj-project73219
-Node: project-am-makefile78889
-Node: ede-step-project79966
-Node: Targets83357
-Node: ede-target84093
-Node: ede-proj-target90180
-Node: ede-proj-target-makefile96154
-Node: semantic-ede-proj-target-grammar99269
-Node: ede-proj-target-makefile-objectcode100658
-Node: ede-proj-target-makefile-archive102216
-Node: ede-proj-target-makefile-program103334
-Node: ede-proj-target-makefile-shared-object105230
-Node: ede-proj-target-elisp106925
-Node: ede-proj-target-elisp-autoloads108838
-Node: ede-proj-target-makefile-miscelaneous112216
-Node: ede-proj-target-makefile-info113421
-Node: ede-proj-target-scheme115845
-Node: project-am-target116612
-Node: project-am-objectcode117613
-Node: project-am-program118636
-Node: project-am-header-noinst119234
-Node: project-am-header-inst119901
-Node: project-am-lisp120559
-Node: project-am-texinfo121134
-Node: project-am-man122153
-Node: Sourcecode122698
-Node: ede-sourcecode122927
-Node: Compilers125581
-Node: ede-compilation-program125995
-Node: ede-compiler129218
-Node: ede-object-compiler132357
-Node: ede-linker133116
-Node: GNU Free Documentation License134584
+Node: Top953
+Node: EDE Project Concepts2768
+Node: EDE Mode4144
+Node: Quick Start4759
+Node: Creating a project12188
+Node: Modifying your project14192
+Node: Add/Remove target14750
+Node: Add/Remove files15421
+Node: Customize Features16330
+Node: Project Local Variables17310
+Node: EDE Project Features19189
+Node: Changing Compilers and Flags19880
+Node: Configurations20832
+Node: Building and Debugging21716
+Node: Miscellaneous commands22303
+Ref: ede-locate-setup-options23121
+Node: Make and Automake projects24028
+Node: Automake direct projects24680
+Node: Android projects25274
+Ref: cedet-android-sdk-root25859
+Node: Arduino projects26092
+Node: Simple projects26700
+Node: ede-cpp-root27653
+Node: ede-java-root32877
+Node: ede-emacs35859
+Node: ede-linux36230
+Node: ede-generic-project36618
+Node: Custom Locate38640
+Node: Extending EDE40222
+Node: Development Overview42932
+Node: Detecting a Project47199
+Node: User interface methods50249
+Node: Base project methods51477
+Node: Sourcecode objects52851
+Node: Compiler and Linker objects54599
+Node: Project56878
+Node: ede-project-placeholder57205
+Node: ede-project59209
+Node: ede-cpp-root-project68175
+Node: ede-simple-project72133
+Node: ede-simple-base-project72715
+Node: ede-proj-project73254
+Node: project-am-makefile78924
+Node: ede-step-project80001
+Node: Targets83392
+Node: ede-target84128
+Node: ede-proj-target90215
+Node: ede-proj-target-makefile96189
+Node: semantic-ede-proj-target-grammar99304
+Node: ede-proj-target-makefile-objectcode100693
+Node: ede-proj-target-makefile-archive102251
+Node: ede-proj-target-makefile-program103369
+Node: ede-proj-target-makefile-shared-object105265
+Node: ede-proj-target-elisp106960
+Node: ede-proj-target-elisp-autoloads108873
+Node: ede-proj-target-makefile-miscelaneous112251
+Node: ede-proj-target-makefile-info113456
+Node: ede-proj-target-scheme115880
+Node: project-am-target116647
+Node: project-am-objectcode117648
+Node: project-am-program118671
+Node: project-am-header-noinst119269
+Node: project-am-header-inst119936
+Node: project-am-lisp120594
+Node: project-am-texinfo121169
+Node: project-am-man122188
+Node: Sourcecode122733
+Node: ede-sourcecode122962
+Node: Compilers125616
+Node: ede-compilation-program126030
+Node: ede-compiler129253
+Node: ede-object-compiler132392
+Node: ede-linker133151
+Node: GNU Free Documentation License134619
 
 End Tag Table
