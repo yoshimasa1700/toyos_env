@@ -85,3 +85,9 @@ if [ -z "$TMUX" ]; then
 	tmux
 fi
 
+xmodmap ~/.xmodmaprc
+source /opt/ros/groovy/setup.zsh
+source ~/catkin_ws/devel/setup.zsh
+export ROS_WORKSPACE=~/catkin_ws
+
+alias open="xdg-open"
