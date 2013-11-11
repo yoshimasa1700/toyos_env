@@ -367,3 +367,68 @@
  ;;        (".*monaco cy-bold-.*-mac-cyrillic" . 0.9)
  ;;        (".*monaco-bold-.*-mac-roman" . 0.9)
  ;;        ("-cdac$" . 1.3)))
+
+(global-set-key "\C-xi" `helm-imenu)
+
+;; 検索(全般)時には大文字小文字の区別をしない 
+(setq case-fold-search t) 
+;; インクリメンタルサーチ時には大文字小文字の区別をしない 
+(setq isearch-case-fold-search t)
+
+(setq inhibit-startup-message t)
+(setq make-backup-files nil)
+
+
+;;(add-to-list 'load-path "~/Emacs/emmet/")
+(require 'emmet-mode)
+(add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
+(add-hook 'html-mode-hook 'emmet-mode)
+(add-hook 'css-mode-hook  'emmet-mode)
+(add-hook 'web-mode-hook  'emmet-mode)
+(eval-after-load "emmet-mode"
+  '(define-key emmet-mode-keymap (kbd "C-j") nil)) ;; C-j は newline のままにしておく
+(keyboard-translate ?\C-i ?\H-i) ;;C-i と Tabの被りを回避
+(define-key emmet-mode-keymap (kbd "H-i") 'emmet-expand-line) ;; C-i で展開
+(require 'web-mode)
+
+;;; emacs 23以下の互換
+(when (< emacs-major-version 24)
+  (defalias 'prog-mode 'fundamental-mode))
+
+;;; 適用する拡張子
+(add-to-list 'auto-mode-alist '("\\.phtml$"     . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tpl\\.php$" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.jsp$"       . web-mode))
+(add-to-list 'auto-mode-alist '("\\.as[cp]x$"   . web-mode))
+(add-to-list 'auto-mode-alist '("\\.erb$"       . web-mode))
+(add-to-list 'auto-mode-alist '("\\.html?$"     . web-mode))
+
+;;; インデント数
+;; (defun web-mode-hook ()
+;;   "Hooks for Web mode."
+;;   (setq web-mode-html-offset   2)
+;;   (setq web-mode-css-offset    2)
+;;   (setq web-mode-script-offset 2)
+;;   (setq web-mode-php-offset    2)
+;;   (setq web-mode-java-offset   2)
+;;   (setq web-mode-asp-offset    2))
+;; (add-hook 'web-mode-hook 'web-mode-hook)
+
+; mmm-mode in php
+    (require 'mmm-mode)
+    (setq mmm-global-mode 'maybe)
+    (mmm-add-mode-ext-class nil "\\.php?\\'" 'html-php)
+    (mmm-add-classes
+    '((html-php
+    :submode php-mode
+    :front "<\\?\\(php\\)?"
+    :back "\\?>")))
+    (add-to-list 'auto-mode-alist '("\\.php?\\'" . xml-mode))
+
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'post-forward-angle-brackets)
+
+
+  (require 'flymake-sass)
+  (add-hook 'sass-mode-hook 'flymake-sass-load)
+  (add-hook 'scss-mode-hook 'flymake-sass-load)
