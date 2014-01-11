@@ -4,6 +4,7 @@
 autoload -U compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z} r:|[-_.]=**'
 
+autoload -U add-zsh-hook
 # プロンプトの設定
 nprom () {
     setopt prompt_subst
@@ -81,13 +82,30 @@ alias gst="git status"
 alias gci="git commit -a"
 alias gdi="git diff"
 alias gbr="git branch"
+
+show-current-dir-as-window-name() {
+tmux set-window-option window-status-format " #I ${PWD:t} " > /dev/null
+}
+
+show-current-dir-as-window-name
+add-zsh-hook chpwd show-current-dir-as-window-name
+
 if [ -z "$TMUX" ]; then
 	tmux
 fi
 
 xmodmap ~/.xmodmaprc
-source /opt/ros/groovy/setup.zsh
-source ~/catkin_ws/devel/setup.zsh
+#source /opt/ros/groovy/setup.zsh
+#source ~/catkin_ws/devel/setup.zsh
 export ROS_WORKSPACE=~/catkin_ws
 
 alias open="xdg-open"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+
+export ROS_MASTER_URI=http://192.168.1.101:11311
+export ROS_IP=192.168.1.103
