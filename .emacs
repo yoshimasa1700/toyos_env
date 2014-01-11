@@ -13,7 +13,7 @@
 ;; インクリメンタルサーチ時には大文字小文字の区別をしない 
 (setq isearch-case-fold-search t)
 
- ;; バッファー名の問い合わせで大文字小文字の区別をしない 
+;; バッファー名の問い合わせで大文字小文字の区別をしない 
 (setq read-buffer-completion-ignore-case t) 
 ;; ファイル名の問い合わせで大文字小文字の区別をしない 
 (setq read-file-name-completion-ignore-case t)
@@ -21,7 +21,7 @@
 
 
 (setq mouse-wheel-progressive-speed nil)
- (setq scroll-conservatively 1)
+(setq scroll-conservatively 1)
 
 (require 'auto-complete)
 (require 'auto-complete-config)
@@ -54,20 +54,20 @@
 
 (require 'flymake)
 
- (defun flymake-cc-init ()
-   (let* ((temp-file   (flymake-init-create-temp-buffer-copy
-                        'flymake-create-temp-inplace))
-          (local-file  (file-relative-name
-                        temp-file
-                        (file-name-directory buffer-file-name))))
-     (list "g++" (list "-Wall" "-Wextra" "-fsyntax-only" local-file))))
+(defun flymake-cc-init ()
+  (let* ((temp-file   (flymake-init-create-temp-buffer-copy
+		       'flymake-create-temp-inplace))
+	 (local-file  (file-relative-name
+		       temp-file
+		       (file-name-directory buffer-file-name))))
+    (list "g++" (list "-Wall" "-Wextra" "-fsyntax-only" local-file))))
 
- (push '("\\.cpp$" flymake-cc-init) flymake-allowed-file-name-masks)
- (push '("\\.h$" flymake-cc-init) flymake-allowed-file-name-masks)
+(push '("\\.cpp$" flymake-cc-init) flymake-allowed-file-name-masks)
+(push '("\\.h$" flymake-cc-init) flymake-allowed-file-name-masks)
 
 (add-hook 'c++-mode-hook
-           '(lambda ()
-              (flymake-mode t)))
+	  '(lambda ()
+	     (flymake-mode t)))
 
 ;;; 対応する括弧を光らせる。
 (show-paren-mode 1)
@@ -75,6 +75,19 @@
 (setq show-paren-style 'mixed)
 ;; off tool bar
 (tool-bar-mode -1)
+
+
+(defface hlline-face
+  '((((class color)
+      (background dark))
+     (:background "gray0"))
+    (((class color)
+      (background light))
+     (:background "SeaGreen" :))
+    (t
+     ()))
+  "Used face hl-line.")
+(setq hl-line-face 'hlline-face)
 ;; 現在行を目立たせる
 (global-hl-line-mode)
 
@@ -85,7 +98,7 @@
 (line-number-mode t)
 
 ;; ;;; 補完可能なものを随時表示
- (icomplete-mode 1)
+(icomplete-mode 1)
 
 ;; setting for helm
 (global-set-key "\C-xi" `helm-imenu)
@@ -163,3 +176,23 @@
 
 (add-hook 'c-mode-common-hook 'google-make-newline-indent)
 (add-hook 'c++-mode-common-hook 'google-make-newline-indent)
+
+;; Mac用フォント設定
+;; http://tcnksm.sakura.ne.jp/blog/2012/04/02/emacs/
+
+;; 英語
+(set-face-attribute 'default nil
+		    :family "Menlo" ;; font
+		    :height 120)    ;; font size
+
+;; 日本語
+(set-fontset-font
+ nil 'japanese-jisx0208
+ ;; (font-spec :family "Hiragino Mincho Pro")) ;; font
+ (font-spec :family "Hiragino Kaku Gothic ProN")) ;; font
+
+;; 半角と全角の比を1:2にしたければ
+(setq face-font-rescale-alist
+      ;;        '((".*Hiragino_Mincho_pro.*" . 1.2)))
+      '((".*Hiragino_Kaku_Gothic_ProN.*" . 1.0)));; Mac用フォント設定
+
