@@ -94,7 +94,7 @@ if [ -z "$TMUX" ]; then
 	tmux
 fi
 
-xmodmap ~/.xmodmaprc
+#xmodmap ~/.xmodmaprc
 #source /opt/ros/groovy/setup.zsh
 #source ~/catkin_ws/devel/setup.zsh
 export ROS_WORKSPACE=~/catkin_ws
@@ -107,5 +107,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
-export ROS_MASTER_URI=http://192.168.1.101:11311
-export ROS_IP=192.168.1.103
+#export ROS_MASTER_URI=http://192.168.1.101:11311
+#export ROS_IP=192.168.1.103
+export ROS_MASTER_URI=http://127.0.0.1:11311
+export ROS_IP=127.0.0.1
