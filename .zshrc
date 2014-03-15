@@ -1,6 +1,3 @@
-#alias emacs='open -a emacs'
-#export PYTHONSTARTUP=$PYTHONSTARTUP:$HOME/.pythonrc.py python
-
 autoload -U compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z} r:|[-_.]=**'
 
@@ -22,27 +19,6 @@ nprom () {
     [[ "$TERM" = "screen" ]] && RPROMPT="[%U%~%u]"
 }
 nprom
-
-## Default shell configuration
-#
-# set prompt
-#
-# case ${UID} in
-# 0)
-#     PROMPT="%B%{^[[31m%}%/#%{^[[m%}%b "
-#     PROMPT2="%B%{^[[31m%}%_#%{^[[m%}%b "
-#     SPROMPT="%B%{^[[31m%}%r is correct? [n,y,a,e]:%{^[[m%}%b "
-#     [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] && 
-#         PROMPT="%{^[[37m%}${HOST%%.*} ${PROMPT}"
-#     ;;
-# *)
-#     PROMPT="%{^[[31m%}%/%%%{^[[m%} "
-#     PROMPT2="%{^[[31m%}%_%%%{^[[m%} "
-#     SPROMPT="%{^[[31m%}%r is correct? [n,y,a,e]:%{^[[m%} "
-#     [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] && 
-#         PROMPT="%{^[[37m%}${HOST%%.*} ${PROMPT}"
-#     ;;
-# esac
 
 # コマンド履歴
 HISTFILE=~/.zsh_history
@@ -76,7 +52,7 @@ setopt nolistbeep
 # Emacsライクキーバインド設定
 bindkey -e 
 
-
+# alias for git
 alias gco="git checkout"
 alias gst="git status"
 alias gci="git commit -a"
@@ -94,20 +70,7 @@ if [ -z "$TMUX" ]; then
 	tmux
 fi
 
-#xmodmap ~/.xmodmaprc
-#source /opt/ros/groovy/setup.zsh
-#source ~/catkin_ws/devel/setup.zsh
-export ROS_WORKSPACE=~/catkin_ws
+#alias open="xdg-open"
 
-alias open="xdg-open"
+if [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
-
-#export ROS_MASTER_URI=http://192.168.1.101:11311
-#export ROS_IP=192.168.1.103
-export ROS_MASTER_URI=http://127.0.0.1:11311
-export ROS_IP=127.0.0.1
