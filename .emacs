@@ -48,26 +48,84 @@
 (global-set-key "\C-t" 'anything)
 (global-set-key (kbd "\C-x\C-m") 'execute-extended-command)
 
+
 (require 'color-theme)
 (color-theme-initialize)
 (load-file "~/.emacs.d/elpa/color-theme-tangotango-0.0.2/color-theme-tangotango.el")
 
+;;; flymake
 (require 'flymake)
-
+(add-hook 'find-file-hook 'flymake-find-file-hook)
+ 
+(add-to-list 'flymake-err-line-patterns
+             ;; g++ 4.7
+             '("\\([^:]+\\):\\([0-9]+\\):\\(\\([0-9]+\\):\\)? \\(\\(error\\|warning\\): \\(.+\\)\\)" 1 2 4 5))
+ 
+(defun flymake-show-and-sit ()
+  "Displays the error/warning for the current line in the minibuffer"
+  (interactive)
+  (progn
+    (let* ((line-no (flymake-current-line-no) )
+           (line-err-info-list (nth 0 (flymake-find-err-info flymake-err-info line-no)))
+           (count (length line-err-info-list)))
+      (while (> count 0)
+        (when line-err-info-list
+          (let* ((file (flymake-ler-file (nth (1- count) line-err-info-list)))
+                 (full-file
+                  (flymake-ler-full-file (nth (1- count) line-err-info-list)))
+                 (text (flymake-ler-text (nth (1- count) line-err-info-list)))
+                 (line (flymake-ler-line (nth (1- count) line-err-info-list))))
+            (message "[%s] %s" line text)))
+        (setq count (1- count)))))
+  (sit-for 60.0))
+ (global-set-key "\C-ce" 'flymake-show-and-sit)
+ 
+(defun flymake-simple-generic-init (cmd &optional opts)
+  (let* ((temp-file  (flymake-init-create-temp-buffer-copy
+                      'flymake-create-temp-inplace))
+         (local-file (file-relative-name
+                      temp-file
+                      (file-name-directory buffer-file-name))))
+    (list cmd (append opts (list local-file)))))
+(defun makefile-exists (dir)
+  (if (file-exists-p (concat dir "Makefile")) t
+    (let ((padir (file-name-directory (directory-file-name dir))))
+      (if (and (not (string= dir padir)) padir) (makefile-exists padir) nil))))
+(defun flymake-simple-make-or-generic-init (cmd &optional opts)
+  (if (makefile-exists default-directory)
+      (flymake-simple-make-init)
+    (flymake-simple-generic-init cmd opts)))
+(defun flymake-c-init ()
+  (flymake-simple-make-or-generic-init
+   "gcc" '("-Wall" "-Wextra" "-Wno-trigraphs" "-fopenmp" "-fsyntax-only")))
 (defun flymake-cc-init ()
-  (let* ((temp-file   (flymake-init-create-temp-buffer-copy
-		       'flymake-create-temp-inplace))
-	 (local-file  (file-relative-name
-		       temp-file
-		       (file-name-directory buffer-file-name))))
-    (list "g++" (list "-Wall" "-Wextra" "-fsyntax-only" local-file))))
+  (flymake-simple-make-or-generic-init
+   "g++" '("-Wall" "-Wextra" "-Wno-trigraphs" "-fopenmp" "-fsyntax-only")))
+(push '("\\.c\\'" flymake-c-init) flymake-allowed-file-name-masks)
+(push '("\\.\\(cc\\|cpp\\|cxx\\|h\\|hpp\\)\\'" flymake-cc-init)
+      flymake-allowed-file-name-masks)
+ 
+;;; flymake-tex
+(defun flymake-get-tex-args (file-name)
+  (list "/usr/texbin/platex" (list "-file-line-error" "-draftmode" "-interaction=nonstopmode" file-name)))
 
-(push '("\\.cpp$" flymake-cc-init) flymake-allowed-file-name-masks)
-(push '("\\.h$" flymake-cc-init) flymake-allowed-file-name-masks)
+;; (defun flymake-cc-init ()
+;;   (let* ((temp-file   (flymake-init-create-temp-buffer-copy
+;; 		       'flymake-create-temp-inplace))
+;; 	 (local-file  (file-relative-name
+;; 		       temp-file
+;; 		       (file-name-directory buffer-file-name))))
+;;     (list "g++" (list "-Wall" "-Wextra" "-fsyntax-only" local-file))))
 
-(add-hook 'c++-mode-hook
-	  '(lambda ()
-	     (flymake-mode t)))
+;; (push '("\\.cpp$" flymake-cc-init) flymake-allowed-file-name-masks)
+;; (push '("\\.cc$" flymake-cc-init) flymake-allowed-file-name-masks)
+
+;; (push '("\\.h$" flymake-cc-init) flymake-allowed-file-name-masks)
+;; (push '("\\.hpp$" flymake-cc-init) flymake-allowed-file-name-masks)
+
+;; (add-hook 'c++-mode-hook
+;; 	  '(lambda ()
+;; 	     (flymake-mode t)))
 
 ;;; 対応する括弧を光らせる。
 (show-paren-mode 1)
@@ -161,9 +219,9 @@
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
 
 
-(require 'flymake-sass)
-(add-hook 'sass-mode-hook 'flymake-sass-load)
-(add-hook 'scss-mode-hook 'flymake-sass-load)
+;; (require 'flymake-sass)
+;; (add-hook 'sass-mode-hook 'flymake-sass-load)
+;; (add-hook 'scss-mode-hook 'flymake-sass-load)
 
 
 (global-linum-mode t)
