@@ -1,3 +1,4 @@
+
 ;; ~/.emacs.d/site-lisp 以下全部読み込み
 (let ((default-directory (expand-file-name "~/.emacs.d/site-lisp")))
   (add-to-list 'load-path default-directory)
@@ -170,28 +171,28 @@
 (setq make-backup-files nil)
 
 ;;(add-to-list 'load-path "~/Emacs/emmet/")
-(require 'emmet-mode)
-(add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
-(add-hook 'html-mode-hook 'emmet-mode)
-(add-hook 'css-mode-hook  'emmet-mode)
-(add-hook 'web-mode-hook  'emmet-mode)
-(eval-after-load "emmet-mode"
-  '(define-key emmet-mode-keymap (kbd "C-j") nil)) ;; C-j は newline のままにしておく
-(keyboard-translate ?\C-i ?\H-i) ;;C-i と Tabの被りを回避
-(define-key emmet-mode-keymap (kbd "H-i") 'emmet-expand-line) ;; C-i で展開
-(require 'web-mode)
+;; (require 'emmet-mode)
+;; (add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
+;; (add-hook 'html-mode-hook 'emmet-mode)
+;; (add-hook 'css-mode-hook  'emmet-mode)
+;; (add-hook 'web-mode-hook  'emmet-mode)
+;; (eval-after-load "emmet-mode"
+;;   '(define-key emmet-mode-keymap (kbd "C-j") nil)) ;; C-j は newline のままにしておく
+;; (keyboard-translate ?\C-i ?\H-i) ;;C-i と Tabの被りを回避
+;; (define-key emmet-mode-keymap (kbd "H-i") 'emmet-expand-line) ;; C-i で展開
+;; (require 'web-mode)
 
 ;;; emacs 23以下の互換
 (when (< emacs-major-version 24)
   (defalias 'prog-mode 'fundamental-mode))
 
 ;;; 適用する拡張子
-(add-to-list 'auto-mode-alist '("\\.phtml$"     . web-mode))
-(add-to-list 'auto-mode-alist '("\\.tpl\\.php$" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.jsp$"       . web-mode))
-(add-to-list 'auto-mode-alist '("\\.as[cp]x$"   . web-mode))
-(add-to-list 'auto-mode-alist '("\\.erb$"       . web-mode))
-(add-to-list 'auto-mode-alist '("\\.html?$"     . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.phtml$"     . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.tpl\\.php$" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.jsp$"       . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.as[cp]x$"   . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.erb$"       . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.html?$"     . web-mode))
 
 ;;; インデント数
 ;; (defun web-mode-hook ()
@@ -205,15 +206,15 @@
 ;; (add-hook 'web-mode-hook 'web-mode-hook)
 
 					; mmm-mode in php
-(require 'mmm-mode)
-(setq mmm-global-mode 'maybe)
-(mmm-add-mode-ext-class nil "\\.php?\\'" 'html-php)
-(mmm-add-classes
- '((html-php
-    :submode php-mode
-    :front "<\\?\\(php\\)?"
-    :back "\\?>")))
-(add-to-list 'auto-mode-alist '("\\.php?\\'" . xml-mode))
+;; (require 'mmm-mode)
+;; (setq mmm-global-mode 'maybe)
+;; (mmm-add-mode-ext-class nil "\\.php?\\'" 'html-php)
+;; (mmm-add-classes
+;;  '((html-php
+;;     :submode php-mode
+;;     :front "<\\?\\(php\\)?"
+;;     :back "\\?>")))
+;; (add-to-list 'auto-mode-alist '("\\.php?\\'" . xml-mode))
 
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
@@ -239,18 +240,17 @@
 ;; http://tcnksm.sakura.ne.jp/blog/2012/04/02/emacs/
 
 ;; 英語
-(set-face-attribute 'default nil
-		    :family "Menlo" ;; font
-		    :height 120)    ;; font size
+;; (set-face-attribute 'default nil
+;; 		    :family "Menlo" ;; font
+;; 		    :height 120)    ;; font size
 
 ;; 日本語
-(set-fontset-font
- nil 'japanese-jisx0208
- ;; (font-spec :family "Hiragino Mincho Pro")) ;; font
- (font-spec :family "Hiragino Kaku Gothic ProN")) ;; font
+;; (set-fontset-font
+;;  nil 'japanese-jisx0208
+;;  ;; (font-spec :family "Hiragino Mincho Pro")) ;; font
+;;  (font-spec :family "Hiragino Kaku Gothic ProN")) ;; font
 
 ;; 半角と全角の比を1:2にしたければ
-(setq face-font-rescale-alist
-      ;;        '((".*Hiragino_Mincho_pro.*" . 1.2)))
-      '((".*Hiragino_Kaku_Gothic_ProN.*" . 1.0)));; Mac用フォント設定
+;;(setq face-font-rescale-alist
+;;      '((".*Hiragino_Kaku_Gothic_ProN.*" . 1.0)));; Mac用フォント設定
 
