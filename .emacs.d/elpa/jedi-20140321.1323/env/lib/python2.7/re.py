@@ -102,12 +102,6 @@ This module also defines an exception 'error'.
 """
 
 import sys
-try:
-    from _sre import MAXREPEAT
-except ImportError:
-    import _sre
-    _sre.MAXREPEAT = 65535 # this monkey-patches all other places of "from _sre import MAXREPEAT"'
-
 import sre_compile
 import sre_parse
 
