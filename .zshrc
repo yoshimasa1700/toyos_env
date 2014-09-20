@@ -72,5 +72,7 @@ fi
 
 #alias open="xdg-open"
 
-if [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+if [ -f ~/.zshrc.local ]; then
+    source ~/.zshrc.local
+fi
 
