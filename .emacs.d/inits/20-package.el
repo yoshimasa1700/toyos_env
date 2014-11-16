@@ -16,7 +16,7 @@
 		 ;; popwin elscreen yascroll buffer-move
 
 		      ;;;; flymake
-		 ;; flycheck flymake-jslint
+		  flycheck flymake-jslint flymake-cursor
 
 		      ;;;; go
 		  ;;go-mode
