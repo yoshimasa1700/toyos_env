@@ -23,14 +23,14 @@
 
 		      ;;;; python
 		  jedi
-
 		      ;;;; helm
 		  helm
-
 		      ;;;; git
 		  ;;magit git-gutter
 		  ;; color theme
 		  color-theme
+		  tangotango-theme
+		  exec-path-from-shell
 		  ))
 
 ;; my/favorite-packagesからインストールしていないパッケージをインストール
