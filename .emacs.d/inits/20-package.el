@@ -31,6 +31,8 @@
 		  color-theme
 		  tangotango-theme
 		  exec-path-from-shell
+		  irony
+		  company-irony
 		  ))
 
 ;; my/favorite-packagesからインストールしていないパッケージをインストール
