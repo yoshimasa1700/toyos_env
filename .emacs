@@ -4,10 +4,8 @@
   (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
       (normal-top-level-add-subdirs-to-load-path)))
 
-
-
 (require 'init-loader)
-(setq init-loader-show-log-after-init nil)
+;;(setq init-loader-show-log-after-init nil)
 (init-loader-load "~/.emacs.d/inits")
 
 (exec-path-from-shell-initialize)
@@ -23,3 +21,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(when (equal system-type 'darwin)
+    (load-file "~/.emacs.d/init-darwin.el"))
