@@ -23,6 +23,7 @@
     exec-path-from-shell
     irony
     company-irony
+    powerline
     ))
 (dolist (package my/favorite-packages)
   (unless (package-installed-p package)
