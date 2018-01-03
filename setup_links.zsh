@@ -13,7 +13,6 @@ do
 	if [ -L "${homefile}" ]; then
 	    echo "link .${onlyfile} exis, remove this link and create new link."
 	    rm ${homefile}
-	    continue
 	else
 	    echo ".${onlyfile} exis, move file to old and create link."
 	    mkdir -p ${HOME}/old
