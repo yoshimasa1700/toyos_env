@@ -16,7 +16,7 @@ do
 	else
 	    echo ".${onlyfile} exis, move file to old and create link."
 	    mkdir -p ${HOME}/old
-	    mv "${homefile}" ${HOME}/old
+	    cp -r "${homefile}" ${HOME}/old && rm -R "${homefile}"
 	fi
 	ln -s "${filepath}" "${homefile}"
     fi
