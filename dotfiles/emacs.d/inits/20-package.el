@@ -24,6 +24,11 @@
 ;;     irony
 ;;     company-irony
 ;;     powerline
+;;     ;; haskell
+;;     haskell-mode
+;;     haskell-cabal
+;;     ghc-mod
+;;     company-ghc
 ;;     ))
 ;; (dolist (package my/favorite-packages)
 ;;   (unless (package-installed-p package)
