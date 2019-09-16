@@ -26,7 +26,7 @@
     ("49e5a7955b853f70d1fe751b2f896921398b273aa62f47bda961a45f80219581" default)))
  '(package-selected-packages
    (quote
-    (counsel company-ghci company-ghc haskell-mode powerline company-irony irony exec-path-from-shell tangotango-theme color-theme helm flymake-python-pyflakes py-autopep8 jedi flymake-cursor flymake-jslint flycheck pos-tip fuzzy auto-complete))))
+    (avy-migemo counsel company-ghci company-ghc haskell-mode powerline company-irony irony exec-path-from-shell tangotango-theme color-theme helm flymake-python-pyflakes py-autopep8 jedi flymake-cursor flymake-jslint flycheck pos-tip fuzzy auto-complete))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

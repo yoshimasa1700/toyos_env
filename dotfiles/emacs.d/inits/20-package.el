@@ -31,6 +31,7 @@
 ;;     company-ghc
 ;;     ;; counsel
 ;;     counsel
+;;     avy-migemo
 ;;     ))
 ;; (dolist (package my/favorite-packages)
 ;;   (unless (package-installed-p package)
