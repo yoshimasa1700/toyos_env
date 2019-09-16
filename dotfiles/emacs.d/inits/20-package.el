@@ -29,6 +29,8 @@
 ;;     haskell-cabal
 ;;     ghc-mod
 ;;     company-ghc
+;;     ;; counsel
+;;     counsel
 ;;     ))
 ;; (dolist (package my/favorite-packages)
 ;;   (unless (package-installed-p package)
