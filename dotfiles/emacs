@@ -26,7 +26,7 @@
     ("49e5a7955b853f70d1fe751b2f896921398b273aa62f47bda961a45f80219581" default)))
  '(package-selected-packages
    (quote
-    (haskell-cabal flycheck-haskell smart-jump dumb-jump avy-migemo counsel company-ghci company-ghc haskell-mode powerline company-irony irony exec-path-from-shell tangotango-theme color-theme helm flymake-python-pyflakes py-autopep8 jedi flymake-cursor flymake-jslint flycheck pos-tip fuzzy auto-complete))))
+    (flycheck-haskell smart-jump dumb-jump avy-migemo counsel company-ghci company-ghc haskell-mode powerline company-irony irony exec-path-from-shell tangotango-theme color-theme helm flymake-python-pyflakes py-autopep8 jedi flymake-cursor flymake-jslint flycheck pos-tip fuzzy auto-complete))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -36,3 +36,34 @@
 
 (when (equal system-type 'darwin)
     (load-file "~/.emacs.d/init-darwin.el"))
+
+(require 'bind-key)
+  (defun copy-to-clipboard ()
+    "Copies selection to x-clipboard."
+    (interactive)
+    (if (display-graphic-p)
+        (progn
+          (message "Yanked region to x-clipboard!")
+          (call-interactively 'clipboard-kill-ring-save)
+          )
+      (if (region-active-p)
+          (progn
+            (shell-command-on-region (region-beginning) (region-end) "xsel -i -b")
+            (message "Yanked region to clipboard!")
+            (deactivate-mark))
+        (message "No region active; can't yank to clipboard!")))
+    )
+
+  (defun paste-from-clipboard ()
+    "Pastes from x-clipboard."
+    (interactive)
+    (if (display-graphic-p)
+        (progn
+          (clipboard-yank)
+          (message "graphics active")
+          )
+      (insert (shell-command-to-string "xsel -o -b"))
+      )
+    )
+(bind-key "C-c" `copy-to-clipboard)
+(bind-key "C-v" `paste-from-clipboard)
