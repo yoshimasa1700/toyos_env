@@ -26,14 +26,16 @@
 ;;     powerline
 ;;     ;; haskell
 ;;     haskell-mode
-;;     haskell-cabal
-;;     ghc-mod
-;;     company-ghc
+;;     ;; haskell-cabal
+;;     ;; ghc-mod
+;;     ;; company-ghc
 ;;     ;; counsel
 ;;     ;; counsel
 ;;     company
+;;     company-quickhelp
 ;;     bind-key
 ;;     eglot
+;;     smart-jump
 ;;     ))
 ;; (dolist (package my/favorite-packages)
 ;;   (unless (package-installed-p package)
