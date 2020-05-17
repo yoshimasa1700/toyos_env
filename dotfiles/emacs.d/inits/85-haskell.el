@@ -12,6 +12,14 @@
 (add-to-list 'company-backends 'company-ghc)
 (add-to-list 'company-backends 'company-ghci)
 
+(add-hook 'haskell-mode-hook #'flycheck-haskell-setup)
+
+(add-hook 'haskell-mode-hook 'interactive-haskell-mode)
+(setq haskell-process-type 'ghci)
+(setq haskell-process-path-ghci "ghci")
+(setq haskell-process-args-ghci "")
+
+
 (defun my-haskell-mode-hook ()
     (interactive)
     ;; インデント
@@ -20,7 +28,7 @@
     (font-lock-mode)
     (imenu-add-menubar-index)
     ;; GHCi のコマンドを設定
-    (setq haskell-program-name "/usr/bin/stack ghci") ;; stack の場合
+    (setq haskell-program-name "/usr/bin/ghci") ;; stack の場合
     (inf-haskell-mode)
     ;; ghc-mod を使えるように
     (ghc-init)

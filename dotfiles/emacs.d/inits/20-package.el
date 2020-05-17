@@ -1,7 +1,7 @@
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
-(package-initialize)
-
+(package-initialize
+)
 ;; (package-refresh-contents)
 ;; (defvar my/favorite-packages
 ;;   '(
@@ -30,8 +30,10 @@
 ;;     ghc-mod
 ;;     company-ghc
 ;;     ;; counsel
-;;     counsel
-;;     avy-migemo
+;;     ;; counsel
+;;     company
+;;     bind-key
+;;     eglot
 ;;     ))
 ;; (dolist (package my/favorite-packages)
 ;;   (unless (package-installed-p package)

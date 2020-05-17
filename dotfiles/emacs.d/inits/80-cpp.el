@@ -5,13 +5,13 @@
 ;; (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
 ;; (add-to-list 'company-backends 'company-irony) ; backend追加
 
-(add-hook 'c-mode-hook '(lambda () (setq tab-width 4)))
-(add-hook 'c++-mode-hook '(lambda () (setq tab-width 4)))
-(defun my-c-c++-mode-init () (setq c-basic-offset 4) )
+(add-hook 'c-mode-hook '(lambda () (setq tab-width 2)))
+(add-hook 'c++-mode-hook '(lambda () (setq tab-width 2)))
+(defun my-c-c++-mode-init () (setq c-basic-offset 2) )
 (add-hook 'c-mode-hook 'my-c-c++-mode-init)
 (add-hook 'c++-mode-hook 'my-c-c++-mode-init)
 
-(setq-default tab-width 4 indent-tabs-mode nil)
+(setq-default tab-width 2 indent-tabs-mode nil)
 
 (add-hook 'c-mode-common-hook
           (lambda () (define-key c-mode-base-map (kbd "C-c c") 'compile)))
@@ -49,3 +49,5 @@
 ;;   (defvar irony-lang-compile-option-alist)
 ;;   (let ((it (cdr-safe (assq major-mode irony-lang-compile-option-alist))))
 ;;     (when it (append '("-x") (split-string it "\s")))))
+
+(add-hook 'write-file-hooks 'delete-trailing-whitespace)

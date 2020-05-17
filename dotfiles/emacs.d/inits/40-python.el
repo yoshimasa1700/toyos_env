@@ -1,19 +1,34 @@
-;; setting for jedi.
-(setenv "PYTHONPATH" "/usr/local/lib/python2.7/site-packages")
-(setenv "PYTHONPATH" "/home/masahiko/.local/lib/python2.7/site-packages")
+(require 'company)
+(require 'bind-key)
+(setq company-minimum-prefix-length 2)
+(setq company-selection-wrap-around t)
 
-(require 'jedi)
-(add-hook 'python-mode-hook 'jedi:setup)
-(setq jedi:complete-on-dot t)
+(bind-key "C-i" 'company-complete)
+(bind-key "C-h" nil company-active-map)
+(bind-key "C-n" 'company-select-next company-active-map)
+(bind-key "C-p" 'company-select-previous company-active-map)
+(bind-key "C-n" 'company-select-next company-search-map)
+(bind-key "C-p" 'company-select-previous company-search-map)
+(bind-key "<tab>" 'company-complete-common-or-cycle company-active-map)
+(bind-key "<backtab>" 'company-select-previous company-active-map)
+(bind-key "C-i" 'company-complete-selection company-active-map)
+(bind-key "M-d" 'company-show-doc-buffer company-active-map)
+(add-hook 'after-init-hook 'global-company-mode)
+(setq company-tooltip-maximum-width 50)
 
-(setq ac-sources
- (delete 'ac-source-words-in-same-mode-buffers ac-sources))
+;; company-quickhelp
+(setq company-quickhelp-color-foreground "white")
+(setq company-quickhelp-color-background "dark slate gray")
+(setq company-quickhelp-max-lines 5)
+(company-quickhelp-mode)
 
-;; setting for autopep8.
-(require 'py-autopep8)
-(add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
+(require 'eglot)
 
-;; flymake.
-(add-hook 'python-mode-hook 'flymake-mode)
-(require 'flymake-python-pyflakes)
-(add-hook 'python-mode-hook 'flymake-python-pyflakes-load)
+(dumb-jump-mode)
+(smart-jump-setup-default-registers)
+
+(add-hook 'python-mode-hook 'eglot-ensure)
+
+(add-to-list 'eglot-server-programs
+	     `(python-mode . ("pyls" "-v" "--tcp" "--host"
+			      "localhost" "--port" :autoport)))
