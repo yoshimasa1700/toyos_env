@@ -1,4 +1,4 @@
 bind-key > save-buffer ~/.tmux-buffer \; run-shell 'xsel -b -i < ~/.tmux-buffer' \; display-message "Copied to clipboard."
 bind-key < if-shell 'xsel -b -o > ~/.tmux-buffer' 'load-buffer ~/.tmux-buffer ; paste-buffer'
 
-source "/home/toyoshi/.local/lib/python2.7/site-packages/powerline/bindings/tmux/powerline.conf"
+# source "/home/toyoshi/.local/lib/python2.7/site-packages/powerline/bindings/tmux/powerline.conf"
