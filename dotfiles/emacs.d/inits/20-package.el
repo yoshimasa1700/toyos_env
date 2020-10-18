@@ -1,8 +1,8 @@
 (require 'package)
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
-(package-initialize
-)
-;; (package-refresh-contents)
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+(package-initialize)
+
+(package-refresh-contents)
 ;; (defvar my/favorite-packages
 ;;   '(
 ;;     auto-complete

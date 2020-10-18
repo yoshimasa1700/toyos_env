@@ -66,4 +66,4 @@
       )
     )
 (bind-key "C-c" `copy-to-clipboard)
-(bind-key "C-v" `paste-from-clipboard)
+(bind-key "C-u" `paste-from-clipboard)

@@ -8,6 +8,8 @@
 # !/.emacs.d/conf
 # !/.emacs.d/elisp
 # !/.emacs.d/public_repos
+elpa/
+recentf
 
 # !/.bashrc
 # |/.zshrc
