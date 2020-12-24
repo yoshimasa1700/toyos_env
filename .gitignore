@@ -18,3 +18,5 @@ recentf
 # !/.screenrc
 # !/.minttyrc
 # .
+
+dotfiles/emacs.d/auto-save-list/
