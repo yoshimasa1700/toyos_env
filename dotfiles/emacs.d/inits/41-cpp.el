@@ -12,3 +12,9 @@
 
 ;; setting for trailing whitespace.
 (add-hook 'write-file-hooks 'delete-trailing-whitespace)
+
+(add-hook 'c++-mode-hook 'eglot-ensure)
+(add-hook 'c-mode-hook 'eglot-ensure)
+
+(add-to-list 'eglot-server-programs `(c++-mode . ("clangd")))
+(add-to-list 'eglot-server-programs `(c-mode . ("clangd")))

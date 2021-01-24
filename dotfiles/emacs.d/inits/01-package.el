@@ -18,7 +18,6 @@
 
 ;;     ;; packages setting for auto completion
 ;;     company
-;;     company-fuzzy
 
 ;;     ;; packages for python
 ;;     py-autopep8
