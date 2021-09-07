@@ -1,5 +1,10 @@
 ;; (require 'package)
-;; (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+;; (setq package-archives
+;;       '(("melpa" . "https://melpa.org/packages/")
+;;         ;; ("melpa-stable" . "https://stable.melpa.org/packages/")
+;;         ("org" . "https://orgmode.org/elpa/")
+;;         ("gnu" . "https://elpa.gnu.org/packages/")))
+
 ;; (package-initialize)
 
 ;; (package-refresh-contents)
@@ -15,6 +20,7 @@
 ;;     ;; packages for coding.
 ;;     eglot
 ;;     smart-jump
+;;     yaml-mode
 
 ;;     ;; packages setting for auto completion
 ;;     company
