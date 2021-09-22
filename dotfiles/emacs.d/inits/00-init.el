@@ -38,3 +38,5 @@
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
 
 (global-linum-mode t)
+
+(setq-default tab-width 2 indent-tabs-mode nil)
