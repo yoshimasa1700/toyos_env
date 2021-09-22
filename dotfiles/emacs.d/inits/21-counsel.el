@@ -13,3 +13,5 @@
 
 ;; (global-set-key "\C-s" 'swiper)
 ;; (setq swiper-include-line-number-in-search t)
+
+(global-set-key (kbd "M-y") 'counsel-yank-pop)
