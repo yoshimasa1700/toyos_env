@@ -19,3 +19,7 @@
 (setq c-default-style
       '((c++-mode . "bsd")
         (c-mode . "bsd")))
+
+;; for CUDA Program
+(setq auto-mode-alist
+      (cons (cons "\\.cu$" 'c++-mode) auto-mode-alist))
