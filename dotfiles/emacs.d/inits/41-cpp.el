@@ -21,5 +21,15 @@
         (c-mode . "bsd")))
 
 ;; for CUDA Program
-(setq auto-mode-alist
-      (cons (cons "\\.cu$" 'c++-mode) auto-mode-alist))
+;;; https://github.com/chachi/cuda-mode
+(use-package cuda-mode)
+
+;; add path manually;
+(add-hook 'cuda-mode-hook
+          (lambda ()
+            ( setq c-basic-offset              4
+                   flycheck-cuda-include-path (list "."))
+            ))
+
+;; later, after irony is loaded
+;; (push 'cuda-mode company-supported-major-modes)
