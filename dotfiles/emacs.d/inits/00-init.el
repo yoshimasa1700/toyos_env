@@ -42,3 +42,4 @@
 (setq-default tab-width 2 indent-tabs-mode nil)
 
 (global-set-key "\C-h" 'delete-backward-char)
+(keyboard-translate ?\C-h ?\C-?)
