@@ -4,7 +4,7 @@
 
 (add-hook 'python-mode-hook 'eglot-ensure)
 (add-to-list 'eglot-server-programs
-	     `(python-mode . ("pyls" "-v" "--tcp" "--host"
+	     `(python-mode . ("pylsp" "-v" "--tcp" "--host"
 			      "localhost" "--port" :autoport)))
 (define-key global-map (kbd "M-d") 'eldoc-doc-buffer)
 
