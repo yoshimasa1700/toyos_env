@@ -1,3 +1,5 @@
+(setq package-check-signature nil)
+
 ;; (require 'package)
 ;; (setq package-archives
 ;;       '(("melpa" . "https://melpa.org/packages/")
@@ -16,6 +18,7 @@
 ;;     counsel
 ;;     powerline
 ;;     bind-key
+;;     nlinum
 
 ;;     ;; packages for coding.
 ;;     eglot
