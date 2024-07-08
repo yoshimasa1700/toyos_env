@@ -13,8 +13,8 @@
 (add-hook 'c++-mode-hook 'eglot-ensure)
 (add-hook 'c-mode-hook 'eglot-ensure)
 
-(add-to-list 'eglot-server-programs `(c++-mode . ("clangd")))
-(add-to-list 'eglot-server-programs `(c-mode . ("clangd")))
+(add-to-list 'eglot-server-programs `(c++-mode . ("/usr/bin/clangd" "--query-driver=/usr/bin/c++")))
+(add-to-list 'eglot-server-programs `(c-mode . ("/usr/bin/clangd  --query-driver=/usr/bin/c++")))
 
 (setq c-default-style
       '((c++-mode . "bsd")
@@ -22,7 +22,7 @@
 
 ;; for CUDA Program
 ;;; https://github.com/chachi/cuda-mode
-(use-package cuda-mode)
+;; (use-package cuda-mode)
 
 ;; add path manually;
 (add-hook 'cuda-mode-hook
