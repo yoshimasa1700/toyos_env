@@ -6,6 +6,7 @@
 (setq company-minimum-prefix-length 1)
 (setq company-selection-wrap-around t)
 (setq company-idle-delay 0)
+(setq company-backends '((company-capf)))
 
 (bind-key "C-h" nil company-active-map)
 (bind-key "C-n" 'company-select-next company-active-map)
