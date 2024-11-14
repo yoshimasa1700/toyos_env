@@ -6,7 +6,6 @@
 (setq company-minimum-prefix-length 1)
 (setq company-selection-wrap-around t)
 (setq company-idle-delay 0)
-(setq company-backends '((company-capf)))
 
 (bind-key "C-h" nil company-active-map)
 (bind-key "C-n" 'company-select-next company-active-map)
@@ -20,3 +19,5 @@
 
 (add-hook 'after-init-hook 'global-company-mode)
 (setq company-tooltip-maximum-width 50)
+
+;; (global-corfu-mode)

@@ -19,6 +19,18 @@
 ;;     powerline
 ;;     bind-key
 ;;     nlinum
+;;     lsp-mode
+;;     lsp-ui
+;;     yasnippet
+;;     lsp-treemacs
+;;     helm-lsp
+;;     projectile
+;;     hydra
+;;     flycheck
+;;     avy
+;;     which-key
+;;     helm-xref
+;;     dap-mode
 
 ;;     ;; packages for coding.
 ;;     eglot
