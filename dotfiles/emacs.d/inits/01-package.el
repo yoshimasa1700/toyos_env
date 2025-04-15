@@ -31,6 +31,7 @@
 ;;     which-key
 ;;     helm-xref
 ;;     dap-mode
+;;     use-package
 
 ;;     ;; packages for coding.
 ;;     eglot
