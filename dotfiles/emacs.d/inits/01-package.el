@@ -32,6 +32,7 @@
 ;;     helm-xref
 ;;     dap-mode
 ;;     use-package
+;;     xclip
 
 ;;     ;; packages for coding.
 ;;     eglot
